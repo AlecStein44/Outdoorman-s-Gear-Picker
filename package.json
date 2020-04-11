@@ -1,6 +1,7 @@
 {
   "name": "Outdoor Man's Gear Picker",
   "version": "0.1.0",
+  "homepage" : "https://outdoorsmangearpicker.herokuapp.com/",
   "private": true,
   "dependencies": {
     "create-react-app": "^3.0.1",
