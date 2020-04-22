@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Kelty Mistral 0° Mummy Sleeping Bag",
+            "degree rating": "0 Degrees",
+            "price": 89.99,
+            "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABpCAMAAAAOXP0IAAAALVBMVEXLHgBHcEzFHQDQHwDxQADvQgC+HQD0WADcNgCqGQC7JgWHOh2mLBC8KgmyHwJ2/3/zAAAAD3RSTlO1ALuxusnEwtDVgx0+Y54XINpDAAAEi0lEQVRogbWaCW7DIBBFx2AIwTb3P25h2O1U+khjmshpq/j5MxsbbWvtvHwga23w1+I3aY3zHdv5HumwX1eacdZ+3yORM7vZ9904k9o3vEXyEeAyJH1wZqn/FkgH99qnt9iD75CscR8G7ZVk3IID4iSfrPOZm1kQBZPOkdM+GS9P0tEHJpLJphInHTGCvsnvkk8k3/vw2xnYUijJxwzEiSFe7JAnrEJRMCneNaUFThCWX/zBWDSmMNLhq44ojZSKL1VFookCI52MsPH+NDRlGQd2H0aKtrEhkYi01oxJlyQsvg450sUFKVBXpHUmpWa1HCl1XAjBM6NwWFrixBfkFAjpTJJiYwj1zlsThZCCtdUf1KNFQylCRAGkw1YSqcFUxdP5CZDsB5BOdrC7izcWS5UhXQyyA0dnnyhenp5AknSX1HwvkRCXAEheZRL3Vw+njMqa5Ehq6rwCKllCSZIGK2k2Eg0o7lYgIYGk3Hf1/lrPJCVFKu4wEDqqxK8YqWjqntAiimRJOT5Lo8Hfa+gKka6sqZlmzLEVLkVSpQT+ayehHOGLmfrtb6T4bxnSNZNGZtMElA0ol6cSVLMq6dHfZXvvKPk6e4GeElIhISMx5GkKqcbRw05ilXBjo5eUV35umpAhHzSOKL2nG01PJFJC44hcNu6VPfcmnsoh0tVd4t5K2ZcinW2cfA/caifgJhhJ/ZuOCA4niHTk0P2PZJXYGHbj5/6XpLQcKd7Q9ir4IBE0WUNJRVSrTZXLmqClAogUMolaHZwilwRJPt2xReuQzVmT1tD8E5sTaj2m2FlT/Cg2U9uuPIidhua5L1PykCSd5dm7lPqJ4LSHkY54ZzWqoVI4KNtPjnROpJuXx/8JalLN+aqT0+DkgqsEG2VDVc7NTNh6DkYKXVMV1sIJDFyQVEJX9wpfcqA8iWgK3Z4i4g+WImBSNv2QjtoiC5Ek6SrjhZLN6/goa4JWWOD1vZR3yhyqzWXqGgu4agmTqAz5xqJBC8kIXR2tpJqN9Ojl0C1wkhorFE3lSVJTrrqqYaZsFCTtlCpUWZLo09xaCMENB5g01cGpuMuSTjWL6h5B6CbAMmmsTwRPnhZI9mao10hb2lqoq64tUfCGA7gwv6ZJ0ZCKeFJl4XCCNeluqHG3If0FvAO8K+Rml8gXfBSBky5jXF8hreNzLo/ipLQ1PQ9iF6Y0C6TTGN4JHwdjBK96rJAO3m+P773Lyi4ovU+4mQKqsObs4qQ9ba3ujWXrxo3wjuSWNsNnluPtVovu3S2QrtApTRm4TbNGOvVgKJ0vZgfXV5ZIR9DmqSpCxUmb0mb/gYIPE+CksP8iye/wR+cLQ++FN0nR+Trq00jwoRmcdHJAPXoPDacFUjqa8wS9QdqSJjfI4mNHsJOvkMgU5+MLVxGDO/kKyf8yE37gaJE0o+Lv+HmtBdL50GQWXG/tXNiMYg/Bv75y1u0HCXe9tVN1D9DCYa2l3vO3WFpyiCVSMlSXw8cF8W+vnX4MJo/6qiIDF9xV0qHb2Ufj3Ne5l04/pnb6kCZo8R2893gwxfYHWbhG+scbEiUAAAAASUVORK5CYII=",
+            "link": "https://www.amazon.com/Kelty-Mistral-Synthetic-Sleeping-Regular/product-reviews/B004GX5I0Y"
+        },
+        {
+            "name": "Bass Pro Shops Eclipse Hawksbill Rectangular Oversized 30º Sleeping Bag",
+            "degree rating": "30 Degrees",
+            "price": 39.99,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQqsXiK9SZqNU-9wWz_dY8mRX7qeCGu6Og93-aq-uznxs8gN3HMNlacUfk8YJqQFA&usqp=CAc",
+            "link": "https://www.basspro.com/shop/en/Bass-Pro-Shops-Eclipse-Hawksbill-Rectangular-Oversized-30-Sleeping-Bag"
+        },
+        {
+            "name": "Cabela's Outfitter XL -20° Sleeping Bag",
+            "degree rating": "30 Degrees",
+            "price": 135,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTnWyuLdo7GshXOhqKSVQBIB0VraelZMu8qvPPgkrgMyzXqYDQ9Oopq1r61jxJb5A&usqp=CAc",
+            "link": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwixg7OIz_foAhWToOwKHSktCB8YABAEGgJwag&ohost=www.google.com&cid=CAESQOD2cleKf7NA05hT9UYx8vTamMuyLhb05-13qYyg1NY92sFvH6N5DEOJsv6xTjAhuYpTyC8s90-efwfVKhWDj7M&sig=AOD64_1QZ-Ls5TGWrZ9Il26AdivreV2qAQ&ctype=5&q=&ved=2ahUKEwj486eIz_foAhUfJDQIHeiHAZcQww96BAgMEDM&adurl="
+        }
+    ]
+}

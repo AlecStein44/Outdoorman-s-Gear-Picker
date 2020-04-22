@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "FEDERAL - AMERICAN EAGLE 6.5 CREEDMOOR AMMUNITION",
+            "Quantity": "20",
+            "price": 21.99,
+            "image": "https://www.brownells.com/userdocs/skus/p_105000721_1.jpg",
+            "link": "https://www.brownells.com/ammunition/rifle-ammo/american-eagle-6-5-creedmoor-ammunition-prod118643.aspx"
+        },
+        {
+            "name": "FEDERAL - PREMIUM 308 WINCHESTER AMMO",
+            "Quantity": "20",
+            "price": 35.99,
+            "image": "https://www.brownells.com/userdocs/products/p_105001190_1.jpg",
+            "link": "https://www.brownells.com/ammunition/rifle-ammo/premium-308-winchester-ammo-prod126881.aspx"
+        },
+        {
+            "name": "HORNADY - BLACK AMMO 7.62X39MM 123GR SST",
+            "Quantity": "200",
+            "price": 216.99,
+            "image": "https://www.brownells.com/userdocs/skus/p_105002858_1.jpg",
+            "link": "https://www.brownells.com/ammunition/rifle-ammo/black-ammo-7-62x39mm-123gr-sst-prod98994.aspx"
+        }
+    ]
+}
