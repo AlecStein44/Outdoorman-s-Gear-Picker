@@ -5,6 +5,8 @@ class Home extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
+            fetchData: [],
+            arrJson: ['ammo.json','firestarter.json',' pants.json','tacklebox.json','bait.json' ,'firstaid.json', 'rangefinder.json' ,'tent.json','bedding.json','fishingrod.json','reel.json','vest.json','binos.json','headwear.json','rifle.json','watercontainer.json','cookingstove.json','hooks.json','scope.json','waterfilter.json','data.json','lantern.json,shirt.json'],
             results: Object.keys(localStorage),
             hunting: [],
             camping: [],
@@ -13,6 +15,43 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
+        let ranNum = Math.floor(Math.random()*this.state.arrJson.length)
+        fetch(`./allJson/${this.state.arrJson[ranNum]}`).then(response => {
+            console.log(response);
+            return response.json();
+          }).then(data => {
+            this.setState({
+                fetchData: data.DATA
+            })
+            console.log(data)
+          }).catch(error => {
+            console.log(error);
+          });
+        sessionStorage.removeItem('rifle')
+        sessionStorage.removeItem('ammo')
+        sessionStorage.removeItem('scope')
+        sessionStorage.removeItem('headwear')
+        sessionStorage.removeItem('shirt')
+        sessionStorage.removeItem('pants')
+        sessionStorage.removeItem('binos')
+        sessionStorage.removeItem('rangefinder')
+        sessionStorage.removeItem('fishingrod')
+        sessionStorage.removeItem('reel')
+        sessionStorage.removeItem('bait')
+        sessionStorage.removeItem('headwear')
+        sessionStorage.removeItem('vest')
+        sessionStorage.removeItem('pants')
+        sessionStorage.removeItem('hooks')
+        sessionStorage.removeItem('tacklebox')
+        sessionStorage.removeItem('tent')
+        sessionStorage.removeItem('bedding')
+        sessionStorage.removeItem('cookingstove')
+        sessionStorage.removeItem('lantern')
+        sessionStorage.removeItem('firstaid')
+        sessionStorage.removeItem('firestarter')
+        sessionStorage.removeItem('watercontainer')
+        sessionStorage.removeItem('waterfilter')
+
         let huntingArray = []
         let campingArray = []
         let fishingArray = []
@@ -40,26 +79,90 @@ class Home extends React.Component {
         window.location.assign(`http://localhost:3000/huntinglist`)
     }
 
+    campingClick(data) {
+        sessionStorage.setItem('active', data)
+
+        window.location.assign(`http://localhost:3000/campinglist`)
+    }
+
+    fishingClick(data) {
+        sessionStorage.setItem('active', data)
+
+        window.location.assign(`http://localhost:3000/fishinglist`)
+    }
+
+    handleDelete(e) {
+        let reParse = this.state.hunting
+
+        localStorage.removeItem(reParse[e.target.value])
+
+        delete reParse[e.target.value]
+
+        this.setState({
+            hunting: reParse
+        })
+    }
+
+    handleFishDelete(e) {
+        let reFishParse = this.state.fishing
+
+        localStorage.removeItem(reFishParse[e.target.value])
+
+        delete reFishParse[e.target.value]
+
+        this.setState({
+            fishing: reFishParse
+        })
+    }
+
+    handleCampingDelete(e) {
+        let reCampParse = this.state.camping
+
+        localStorage.removeItem(reCampParse[e.target.value])
+
+        delete reCampParse[e.target.value]
+
+        this.setState({
+            camping: reCampParse
+        })
+    }
+
+    handleBuyNow(e) {
+        window.location.assign(`${e.target.value}`)
+    }
+
     render() {
         return(
             <main>
                 <div className="home-list">
                     <h2 className="home-h2">Hunting List</h2>
-                    {this.state.hunting.map(data => {return <h3 value={data} onClick={() => this.huntingClick(data)} >{data}</h3>})}
-                    <img className="home-plus" src="https://lh3.googleusercontent.com/proxy/SxuI2vGrt26fyWUx-f_2KGvAsPv0o11XVRliOxLyEbUoOydbuOhTd1EaB7pr2rwRPPmclqdatXoTDMpFPcL9WvwnZrJKjfM" />
+                    {this.state.hunting.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.huntingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleDelete.bind(this)}>X</button></section>})}
+                    <a href='http://localhost:3000/newhuntinglist'><span className="home-plus" >&#43;</span></a>
                 </div>
 
                 <div className="home-list">
                     <h2 className="home-h2">Hiking/Camping List</h2>
-                    {this.state.camping.map(data => {return <h3 value={data} onClick={() => this.handleClick(data)} >{data}</h3>})}
-                    <img className="home-plus" src="https://lh3.googleusercontent.com/proxy/SxuI2vGrt26fyWUx-f_2KGvAsPv0o11XVRliOxLyEbUoOydbuOhTd1EaB7pr2rwRPPmclqdatXoTDMpFPcL9WvwnZrJKjfM" />
-                </div>\
+                    {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleCampingDelete.bind(this)}>X</button></section>})}
+                    <a href='http://localhost:3000/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
+                </div>
 
                 <div className="home-list">
                     <h2 className="home-h2">Fishing List</h2>
-                    {this.state.fishing.map(data => {return <h3 value={data} onClick={() => this.handleClick(data)} >{data}</h3>})}
-                    <img className="home-plus" src="https://lh3.googleusercontent.com/proxy/SxuI2vGrt26fyWUx-f_2KGvAsPv0o11XVRliOxLyEbUoOydbuOhTd1EaB7pr2rwRPPmclqdatXoTDMpFPcL9WvwnZrJKjfM" />
+                    {this.state.fishing.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.fishingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleFishDelete.bind(this)}>X</button></section>})}
+                    <a href='http://localhost:3000/newfishinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
                 </div>    
+
+                <div className="home-random-div">
+                    {this.state.fetchData.map(data => {
+                        return(
+                            <section className="home-random-section">
+                                <img className="home-random-img" src={data.image} />
+                                <p className="home-random-p">{data.name}</p>
+                                <button className="home-random-button" onClick={this.handleBuyNow.bind(this)} value={data.link}>Buy Now!</button>
+                            </section>
+                        )
+                    })}
+                </div>
             </main>
         )
     }
