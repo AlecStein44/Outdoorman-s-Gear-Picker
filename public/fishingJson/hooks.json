@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Trokar Pro-V Octopus Hook",
+            "size": "2/0",
+            "price": 6.19,
+            "image": "https://www.fishermanswarehouse.com/cache/images/product_full_16x9/mfiles/product/image/unknown.5c14475c7996e.jpg",
+            "link": "https://www.fishermanswarehouse.com/product/eagle-claw-trokar-octopus-hook-pro-v"
+        },
+        {
+            "name": "Eagle Claw Lazer Sharp L7 Light Wire Extreme Live Bait Hook",
+            "size": "5/10",
+            "price": 3.99,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTVYSflXfakYJLKLIib50T5F93ZT_CJZJCMnKfSbAIw-AnGxOFveEBfND2-6huO3CzWt2WCZ7iDJw&usqp=CAc",
+            "link": "https://www.tackledirect.com/eagle-claw-lazer-sharp-l319l-needle-live-bait-light-wide-gap-hooks.html"
+        },
+        {
+            "name": "Gamakatsu Octopus Hooks",
+            "size": "4",
+            "price": 4.69,
+            "image": "https://img.tacklewarehouse.com/watermark/rs.php?path=GOHK-1.jpg&nw=302",
+            "link": "https://www.tacklewarehouse.com/Gamakatsu_Octopus_Hook/descpage-GOHK.html"
+        }
+    ]
+}

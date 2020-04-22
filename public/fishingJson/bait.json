@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Berkley PowerBait The Champ Minnow",
+            "Length": "3.4 Inches",
+            "price": 3.98,
+            "image": "https://img.tacklewarehouse.com/watermark/rs.php?path=PBCM-BLS-1.jpg&nw=302",
+            "link": "https://www.tacklewarehouse.com/Berkley_Powerbait_The_Champ_Jerk_Minnow_34_6pk/descpage-PBCM.html"
+        },
+        {
+            "name": "Strike King Red Eye Shad Crankbait",
+            "Length": "2-5/8 Inches",
+            "price": 5.99,
+            "image": "https://basspro.scene7.com/is/image/BassPro/override_badtothebon-90485_lure?$BPSite%5FPDPSwatch$",
+            "link": "https://www.basspro.com/shop/en/strike-king-red-eye-shad-crankbait"
+        },
+        {
+            "name": "Heddon Saltwater Super Spook",
+            "Length": "5 Inches",
+            "price": 4.88,
+            "image": "https://basspro.scene7.com/is/image/BassPro/override_bonesilver-22293_lure?$BPSite%5FPDPSwatch$",
+            "link": "https://www.basspro.com/shop/en/heddon-saltwater-super-spook"
+        }
+    ]
+}

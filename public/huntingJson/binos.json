@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "LEUPOLD - BX-1 MCKENZIE 8X42MM BINOCULARS",
+            "power": "8x",
+            "price": 185.99,
+            "image": "https://cdn-us-ec.yottaa.net/53ff2f503c881650e20004c9/www.brownells.com/v~4b.10c/userdocs/products/p_100028629_2.jpg?yocs=p_",
+            "link": "https://www.brownells.com/optics-mounting/binoculars-amp-accessories/binoculars/bx-1-mckenzie-8x42mm-binoculars-prod116729.aspx?dym=y"
+        },
+        {
+            "name": "Zeiss Conquest HD 15x56mm Outdoor Binoculars",
+            "power": "15x",
+            "price": 1799.99,
+            "image": "https://op1.0ps.us/978-550-ffffff-no-upscale/opplanet-zeiss-conquest-hd-15x56mm-binoculars-525633-0000-000-main-1.jpg",
+            "link": "https://www.opticsplanet.com/zeiss-conquest-hd-15x56mm-binoculars.html"
+        },
+        {
+            "name": "Vortex Razor UHD 10x42mm Binocular",
+            "power": "10x",
+            "price": 1449.99,
+            "image": "https://op1.0ps.us/978-550-ffffff-no-upscale/opplanet-vortex-razor-uhd-10x42mm-binocular-green-rzb-3102-vx-bi-vbc82m-rzb-3102-main.jpg",
+            "link": "https://www.opticsplanet.com/vortex-razor-uhd-10x42mm-binocular.html"
+        }
+    ]
+}
