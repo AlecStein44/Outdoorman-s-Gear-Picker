@@ -76,19 +76,19 @@ class Home extends React.Component {
     huntingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`http://localhost:3000/huntinglist`)
+        window.location.assign(`https://outdoorgearpicker.herokuapp.com/huntinglist`)
     }
 
     campingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`http://localhost:3000/campinglist`)
+        window.location.assign(`https://outdoorgearpicker.herokuapp.com/campinglist`)
     }
 
     fishingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`http://localhost:3000/fishinglist`)
+        window.location.assign(`https://outdoorgearpicker.herokuapp.com/fishinglist`)
     }
 
     handleDelete(e) {
@@ -137,19 +137,19 @@ class Home extends React.Component {
                 <div className="home-list">
                     <h2 className="home-h2">Hunting List</h2>
                     {this.state.hunting.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.huntingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleDelete.bind(this)}>X</button></section>})}
-                    <a href='http://localhost:3000/newhuntinglist'><span className="home-plus" >&#43;</span></a>
+                    <a href='https://outdoorgearpicker.herokuapp.com/newhuntinglist'><span className="home-plus" >&#43;</span></a>
                 </div>
 
                 <div className="home-list">
                     <h2 className="home-h2">Hiking/Camping List</h2>
                     {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleCampingDelete.bind(this)}>X</button></section>})}
-                    <a href='http://localhost:3000/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
+                    <a href='https://outdoorgearpicker.herokuapp.com/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
                 </div>
 
                 <div className="home-list">
                     <h2 className="home-h2">Fishing List</h2>
                     {this.state.fishing.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.fishingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleFishDelete.bind(this)}>X</button></section>})}
-                    <a href='http://localhost:3000/newfishinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
+                    <a href='https://outdoorgearpicker.herokuapp.com/newfishinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
                 </div>    
 
                 <div className="home-random-div">
