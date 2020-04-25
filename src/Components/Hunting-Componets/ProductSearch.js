@@ -68,7 +68,7 @@ class ProductSearch extends React.Component {
 
         sessionStorage.setItem(this.state.params, JSON.stringify(selected))
 
-        window.location.assign('outdoorgearpicker.now.sh/newhuntinglist')
+        window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist')
     }
 
     render() {
@@ -91,7 +91,7 @@ class ProductSearch extends React.Component {
                              </tr> )
                 })}
                 </table>
-                <button className="list-back" onClick={() => { window.location.assign('outdoorgearpicker.now.sh/newhuntinglist') }}>Back</button>
+                <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist') }}>Back</button>
             </main>
         )
     }

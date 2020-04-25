@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Home extends React.Component {
-    //outdoorgearpicker.now.sh/
+    //https://outdoorgearpicker.now.sh/
 
     constructor (props) {
         super(props);
@@ -77,19 +77,19 @@ class Home extends React.Component {
     huntingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`outdoorgearpicker.now.sh/huntinglist`)
+        window.location.assign(`https://outdoorgearpicker.now.sh/huntinglist`)
     }
 
     campingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`outdoorgearpicker.now.sh/campinglist`)
+        window.location.assign(`https://outdoorgearpicker.now.sh/campinglist`)
     }
 
     fishingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`outdoorgearpicker.now.sh/fishinglist`)
+        window.location.assign(`https://outdoorgearpicker.now.sh/fishinglist`)
     }
 
     handleDelete(e) {
@@ -141,7 +141,7 @@ class Home extends React.Component {
                         <div class='home-oldnew-list'>
                             {this.state.hunting.length === 0 ? <p className="home-new-p">Click the plus sign to make a new list.</p> : null}
                             {this.state.hunting.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.huntingClick(data)} >{data.replace("Hunting", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleDelete.bind(this)}>X</button></section>})}
-                            <a href='outdoorgearpicker.now.sh/newhuntinglist'><span className="home-plus" >&#43;</span></a>
+                            <a href='https://outdoorgearpicker.now.sh/newhuntinglist'><span className="home-plus" >&#43;</span></a>
                         </div>
                     </div>
 
@@ -150,7 +150,7 @@ class Home extends React.Component {
                         <div class='home-oldnew-list'>
                             {this.state.camping.length === 0 ? <p className="home-new-p">Click the plus sign to make a new list.</p> : null}
                             {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data.replace("Camping", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleCampingDelete.bind(this)}>X</button></section>})}
-                            <a href='outdoorgearpicker.now.sh/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
+                            <a href='https://outdoorgearpicker.now.sh/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
                         </div>
                     </div>
 
@@ -159,7 +159,7 @@ class Home extends React.Component {
                         <div class='home-oldnew-list'>
                             {this.state.fishing.length === 0 ? <p className="home-new-p">Click the plus sign to make a new list.</p> : null}
                             {this.state.fishing.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.fishingClick(data)} >{data.replace("Fishing", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleFishDelete.bind(this)}>X</button></section>})}
-                            <a href='outdoorgearpicker.now.sh/newfishinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
+                            <a href='https://outdoorgearpicker.now.sh/newfishinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
                         </div>
                     </div>    
                 </div>
