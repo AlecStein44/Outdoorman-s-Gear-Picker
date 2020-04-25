@@ -68,7 +68,7 @@ class FishingProductSearch extends React.Component {
 
         sessionStorage.setItem(this.state.params, JSON.stringify(selected))
 
-        window.location.assign('https://outdoorgearpicker.herokuapp.com/newfishinglist')
+        window.location.assign('outdoorgearpicker.now.sh/newfishinglist')
     }
 
     render() {
@@ -91,7 +91,7 @@ class FishingProductSearch extends React.Component {
                              </tr> )
                 })}
                 </table>
-                <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.herokuapp.com/newfishinglist') }}>Back</button>
+                <button className="list-back" onClick={() => { window.location.assign('outdoorgearpicker.now.sh/newfishinglist') }}>Back</button>
             </main>
         )
     }

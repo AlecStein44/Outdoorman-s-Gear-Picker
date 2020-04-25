@@ -2,98 +2,926 @@
   text-align: center;
 }
 
-.home-list {
-  margin-bottom: 5rem
+@media screen and (min-width: 1333px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2D3328;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+  }
+  
+  .header-a {
+    margin: 10px;
+    color: white;
+  }
+  
+  .header-h1 {
+    font-size: 35px;
+    color: white;
+    margin-left: 100px;
+    text-decoration: none;
+  }
+  
+  nav {
+    margin-top: 8px;
+    margin-right: 15px;
+  }
+  
+  .home-list-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #home-hunting-image {
+    height: 350px;
+    width: 400px;
+  }
+  
+  #home-hunting {
+    background-image: url(https://media.istockphoto.com/photos/hunter-shooting-with-rifle-picture-id628611642?k=6&m=628611642&s=612x612&w=0&h=3Aqij1BmD3who8oCbrbiFuwuM0L9veYF-RAqsadTKfA=);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #home-camping {
+    background-image: url(https://c0.wallpaperflare.com/preview/632/810/322/adventure-camp-camping-campsite.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #home-fishing {
+    background-image: url(https://media.istockphoto.com/photos/fishing-concepts-picture-id664304800?k=6&m=664304800&s=612x612&w=0&h=ROFo47Oot_zqg8SOLgj_3hZ0a8RpsfGfQhdC3zYqUeA=);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .home-h2 {
+    color: white;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px, #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    filter: drop-shadow(10px 10px 5px black);
+    border: 1px solid black;
+    padding: 150px;
+    margin: 20px 20px 0px 20px;
+    max-width: 300px;
+  }
+  
+  .home-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-oldnew-list {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .home-list:hover .home-oldnew-list {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+    color: black;
+    width: 402px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  
+  .home-list-delete {
+    height: 25px;
+    width: 30px;
+    margin-left: 15px;
+    margin-top: 5px;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .home-list-delete:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .home-listsec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .home-plus {
+    content: "\002B";
+    font-weight: 1000;
+    font-size: 84px;
+    color: black;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .home-plus:hover {
+    color: #2D3328;
+  }
+  
+  .home-new-p {
+    text-align: center;
+  }
+  
+  .home-random-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .home-random-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid grey;
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px 40px;
+    background-color: honeydew;
+  }
+  
+  .home-random-img {
+    width: 100px;
+    height: 100px;
+    border-width: 100%;
+    border-bottom: 1px solid grey;
+  }
+  
+  .home-random-p {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-width: 100%;
+    text-align: center;
+  }
+  
+  h3 {
+    cursor: pointer;
+  }
+  
+  main {
+    margin: 5rem;
+  }
+  
+  .list-table {
+    margin: 0px auto;
+    border-collapse: collapse;
+    min-width: 80%;
+    background-color: white;
+  }
+  
+  .list-tr {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .list-tr-th {
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .list-td, .list-th {
+    text-align: center;
+    padding: 8px;
+    height: 45px;
+  }
+  
+  .list-image {
+    height: 50px;
+    width: 50px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0000FF;
+  }
+  
+  .newlist {
+    margin-top: 20px;
+    margin-left: 10%;
+  }
+  
+  .newlist-input {
+    padding: 4px;
+  }
+  
+  .newlist-save {
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .newlist-save:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .list-button {
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .list-back {
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #4C5030;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .list-back:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .buybutton {
+    background-color: #75744B;
+    padding: 5px;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+  }
+  
+  .buybutton:hover {
+    background-color: #2D3328;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .list-delete {
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .list-delete:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+
+  .list-save {
+    background-color: #75744B;
+    padding: 5px;
+    color: white;
+    margin-left: 10%;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+  }
+  
+  .list-save:hover {
+    background-color: #2D3328;
+    color: white;
+    cursor: pointer;
+  }
+
+  .list-hassaved {
+    margin-left: 10%;
+  }
 }
 
-.home-plus {
-  content: "\002B";
-  font-weight: 1000;
-  font-size: 84px;
-  color: black;
-  width: 150px;
-  height: 150px;
+
+
+@media screen and (max-width: 1332px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2D3328;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+  }
+  
+  .header-a {
+    margin: 10px;
+    color: white;
+  }
+  
+  .header-h1 {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav {
+    margin-top: 8px;
+    margin-right: 15px;
+  }
+  
+  .home-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #home-hunting-image {
+    height: 350px;
+    width: 400px;
+  }
+  
+  #home-hunting {
+    background-image: url(https://media.istockphoto.com/photos/hunter-shooting-with-rifle-picture-id628611642?k=6&m=628611642&s=612x612&w=0&h=3Aqij1BmD3who8oCbrbiFuwuM0L9veYF-RAqsadTKfA=);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #home-camping {
+    background-image: url(https://c0.wallpaperflare.com/preview/632/810/322/adventure-camp-camping-campsite.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #home-fishing {
+    background-image: url(https://media.istockphoto.com/photos/fishing-concepts-picture-id664304800?k=6&m=664304800&s=612x612&w=0&h=ROFo47Oot_zqg8SOLgj_3hZ0a8RpsfGfQhdC3zYqUeA=);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .home-h2 {
+    color: white;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px, #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    filter: drop-shadow(10px 10px 5px black);
+    border: 1px solid black;
+    padding: 150px;
+    margin: 20px 20px 0px 20px;
+    max-width: 300px;
+  }
+  
+  .home-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-oldnew-list {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .home-list:hover .home-oldnew-list {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+    color: black;
+    width: 402px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  
+  .home-list-delete {
+    height: 25px;
+    width: 30px;
+    margin-left: 15px;
+    margin-top: 5px;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .home-list-delete:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .home-listsec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .home-plus {
+    content: "\002B";
+    font-weight: 1000;
+    font-size: 84px;
+    color: black;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .home-plus:hover {
+    color: #2D3328;
+  }
+  
+  .home-new-p {
+    text-align: center;
+  }
+  
+  .home-random-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-random-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid grey;
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px 40px;
+    background-color: honeydew;
+  }
+  
+  .home-random-img {
+    width: 100px;
+    height: 100px;
+    border-width: 100%;
+    border-bottom: 1px solid grey;
+  }
+  
+  .home-random-p {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-width: 100%;
+    text-align: center;
+  }
+  
+  h3 {
+    cursor: pointer;
+  }
+  
+  main {
+    margin: 5rem;
+  }
+  
+  .list-table {
+    margin: 0px auto;
+    border-collapse: collapse;
+    min-width: 80%;
+    background-color: white;
+  }
+  
+  .list-tr {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .list-tr-th {
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .list-td, .list-th {
+    text-align: center;
+    padding: 8px;
+    height: 45px;
+  }
+  
+  .list-image {
+    height: 50px;
+    width: 50px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0000FF;
+  }
+  
+  .newlist {
+    margin-top: 20px;
+    margin-left: 10%;
+  }
+  
+  .newlist-input {
+    padding: 4px;
+  }
+  
+  .newlist-save {
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .newlist-save:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .list-button {
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .list-back {
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #4C5030;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .list-back:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .buybutton {
+    background-color: #75744B;
+    padding: 5px;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+  }
+  
+  .buybutton:hover {
+    background-color: #2D3328;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .list-delete {
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .list-delete:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+
+  .list-save {
+    background-color: #75744B;
+    padding: 5px;
+    color: white;
+    margin-left: 10%;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+  }
+  
+  .list-save:hover {
+    background-color: #2D3328;
+    color: white;
+    cursor: pointer;
+  }
+
+  .list-hassaved {
+    margin-left: 10%;
+  }
 }
 
-.home-plus:hover {
-  text-shadow: 1px 1px 1px black;
-}
 
-header {
-  display: flex;
-  align-content: center;
-  justify-content: baseline;
-}
 
-.header-h1 {
-  font-size: 35px;
-  color: black;
-  text-decoration: none;
-}
+@media screen and (max-width: 799px) {
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2D3328;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+  }
+  
+  .header-a {
+    margin: 10px;
+    color: white;
+  }
+  
+  .header-h1 {
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .home-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #home-hunting-image {
+    height: 350px;
+    width: 400px;
+  }
+  
+  #home-hunting {
+    background-image: url(https://media.istockphoto.com/photos/hunter-shooting-with-rifle-picture-id628611642?k=6&m=628611642&s=612x612&w=0&h=3Aqij1BmD3who8oCbrbiFuwuM0L9veYF-RAqsadTKfA=);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #home-camping {
+    background-image: url(https://c0.wallpaperflare.com/preview/632/810/322/adventure-camp-camping-campsite.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #home-fishing {
+    background-image: url(https://media.istockphoto.com/photos/fishing-concepts-picture-id664304800?k=6&m=664304800&s=612x612&w=0&h=ROFo47Oot_zqg8SOLgj_3hZ0a8RpsfGfQhdC3zYqUeA=);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .home-h2 {
+    color: white;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px, #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    filter: drop-shadow(10px 10px 5px black);
+    border: 1px solid black;
+    padding: 150px;
+    margin: 20px 20px 0px 20px;
+    max-width: 300px;
+  }
+  
+  .home-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-oldnew-list {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .home-list:hover .home-oldnew-list {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+    color: black;
+    width: 402px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  
+  .home-list-delete {
+    height: 25px;
+    width: 30px;
+    margin-left: 15px;
+    margin-top: 5px;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .home-list-delete:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .home-listsec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .home-plus {
+    content: "\002B";
+    font-weight: 1000;
+    font-size: 84px;
+    color: black;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .home-plus:hover {
+    color: #2D3328;
+  }
+  
+  .home-new-p {
+    text-align: center;
+  }
+  
+  .home-random-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-random-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid grey;
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px 40px;
+    background-color: honeydew;
+  }
+  
+  .home-random-img {
+    width: 100px;
+    height: 100px;
+    border-width: 100%;
+    border-bottom: 1px solid grey;
+  }
+  
+  .home-random-p {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-width: 100%;
+    text-align: center;
+  }
+  
+  h3 {
+    cursor: pointer;
+  }
+  
+  main {
+    margin: 5rem;
+  }
+  
+  table {
+    border: 0;
+  }
 
-h3 {
-  cursor: pointer;
-}
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+  .list-image {
+    height: 50px;
+    width: 50px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0000FF;
+  }
+  
+  .newlist {
+    margin-top: 20px;
+    margin-left: 10%;
+  }
+  
+  .newlist-input {
+    padding: 4px;
+  }
+  
+  .newlist-save {
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .newlist-save:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .list-button {
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .list-back {
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #4C5030;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .list-back:hover {
+    background-color: #2D3328;
+    color: white;
+  }
+  
+  .buybutton {
+    background-color: #75744B;
+    padding: 5px;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+  }
+  
+  .buybutton:hover {
+    background-color: #2D3328;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .list-delete {
+    background: white;
+    margin: 10px 20%;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .list-delete:hover {
+    background-color: #2D3328;
+    color: white;
+  }
 
-main {
-  margin: 5rem
-}
+  .list-save {
+    background-color: #75744B;
+    padding: 5px;
+    color: white;
+    margin-left: 10%;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
+  }
+  
+  .list-save:hover {
+    background-color: #2D3328;
+    color: white;
+    cursor: pointer;
+  }
 
-.list-table {
-  border-collapse: collapse;
-}
+  .list-hassaved {
+    margin-left: 10%;
+  }
 
-.list-tr {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.list-td, .list-th {
-  text-align: center;
-  padding: 8px;
-}
-
-.list-image {
-  height: 50px;
-  width: 50px;
-}
-
-.home-listsec {
-  display: flex;
-  flex-direction: row;
-}
-
-a {
-  text-decoration: none;
-  color: #0000FF;
-}
-
-.home-random-div {
-  display: flex;
-  flex-direction: row;
-}
-
-.home-random-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid grey;
-  width: 250px;
-  height: 200px;
-  padding: 20px;
-  margin: 10px;
-}
-
-.home-random-img {
-  width: 100px;
-  height: 100px;
-  border-width: 100%;
-  border-bottom: 1px solid grey;
-}
-
-.home-random-p {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  border-width: 100%;
-  text-align: center;
+  .no-td {
+    display: none;
+  }
 }

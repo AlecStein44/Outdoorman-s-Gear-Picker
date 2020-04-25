@@ -99,7 +99,7 @@ class CampingList extends React.Component {
 
         let reParse = this.state.results
 
-        delete reParse[e.target.value]
+        reParse[e.target.value] = ''
 
         reParse[`${e.target.value}Price`] = 0
 
@@ -140,7 +140,6 @@ class CampingList extends React.Component {
         console.log(this.state.tent)
         return(
             <main>
-                <button className="list-home" onClick={() => { window.location.assign('https://outdoorgearpicker.herokuapp.com/') }}>Home</button>
                <table className="list-table">
                    <tr className="list-tr">
                        <th className="list-th">Gear Type</th>
@@ -150,72 +149,73 @@ class CampingList extends React.Component {
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">tent</td>
-                        {this.state.tent.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.tentImage} /></td> : <td></td>}
-                        {this.state.tent.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.herokuapp.com/editcampingproductsearch?type=tent'>Add tent</a> : <td className="list-td">{this.state.tent}</td>}
-                        {this.state.tent.length === 0 ? <td></td> : <td className="list-td">${this.state.tentPrice}</td>}
-                        {this.state.tent.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.tl}>Buy Now!</button></td> : <td></td>}
-                        {this.state.tent.length !== 0 ? <button className="list-delete" value="tent" onClick={this.handleDelete.bind(this)}>X</button> : <td></td>}
+                        {this.state.tent.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.tentImage} /></td> : <td className="no-td"></td>}
+                        {this.state.tent.length === 0 ? <a className="newlist-a" href='outdoorgearpicker.now.sh/editcampingproductsearch?type=tent'>Add tent</a> : <td className="list-td">{this.state.tent}</td>}
+                        {this.state.tent.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.tentPrice}</td>}
+                        {this.state.tent.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.tl}>Buy Now!</button></td> : <td className="no-td"></td>}
+                        {this.state.tent.length !== 0 ? <button className="list-delete" value="tent" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">bedding</td>
-                        {this.state.bedding.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.beddingImage} /></td> : <td></td>}
-                        {this.state.bedding.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.herokuapp.com/editcampingproductsearch?type=bedding'>Add bedding</a> : <td className="list-td">{this.state.bedding}</td>}
-                        {this.state.bedding.length === 0 ? <td></td> : <td className="list-td">${this.state.beddingPrice}</td>}
-                        {this.state.bedding.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.bl}>Buy Now!</button></td> : <td></td>}
-                        {this.state.bedding.length !== 0 ? <button className="list-delete" value="bedding" onClick={this.handleDelete.bind(this)}>X</button> : <td></td>}
+                        {this.state.bedding.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.beddingImage} /></td> : <td className="no-td"></td>}
+                        {this.state.bedding.length === 0 ? <a className="newlist-a" href='outdoorgearpicker.now.sh/editcampingproductsearch?type=bedding'>Add bedding</a> : <td className="list-td">{this.state.bedding}</td>}
+                        {this.state.bedding.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.beddingPrice}</td>}
+                        {this.state.bedding.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.bl}>Buy Now!</button></td> : <td className="no-td"></td>}
+                        {this.state.bedding.length !== 0 ? <button className="list-delete" value="bedding" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">cookingstove</td>
-                        {this.state.cookingstove.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.cookingstoveImage} /></td> : <td></td>}
-                        {this.state.cookingstove.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.herokuapp.com/editcampingproductsearch?type=cookingstove'>Add cookingstove</a> : <td className="list-td">{this.state.cookingstove}</td>}
-                        {this.state.cookingstove.length === 0 ? <td></td> : <td className="list-td">${this.state.cookingstovePrice}</td>}
-                        {this.state.cookingstove.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.csl}>Buy Now!</button></td> : <td></td>}
-                        {this.state.cookingstove.length !== 0 ? <button className="list-delete" value="cookingstove" onClick={this.handleDelete.bind(this)}>X</button> : <td></td>}
+                        {this.state.cookingstove.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.cookingstoveImage} /></td> : <td className="no-td"></td>}
+                        {this.state.cookingstove.length === 0 ? <a className="newlist-a" href='outdoorgearpicker.now.sh/editcampingproductsearch?type=cookingstove'>Add cookingstove</a> : <td className="list-td">{this.state.cookingstove}</td>}
+                        {this.state.cookingstove.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.cookingstovePrice}</td>}
+                        {this.state.cookingstove.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.csl}>Buy Now!</button></td> : <td className="no-td"></td>}
+                        {this.state.cookingstove.length !== 0 ? <button className="list-delete" value="cookingstove" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">lantern</td>
-                        {this.state.lantern.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.lanternImage} /></td> : <td></td>}
-                        {this.state.lantern.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.herokuapp.com/editcampingproductsearch?type=lantern'>Add lantern</a> : <td className="list-td">{this.state.lantern}</td>}
-                        {this.state.lantern.length === 0 ? <td></td> : <td className="list-td">${this.state.lanternPrice}</td>}
-                        {this.state.lantern.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.ll}>Buy Now!</button></td> : <td></td>}
-                        {this.state.lantern.length !== 0 ? <button className="list-delete" value="lantern" onClick={this.handleDelete.bind(this)}>X</button> : <td></td>}
+                        {this.state.lantern.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.lanternImage} /></td> : <td className="no-td"></td>}
+                        {this.state.lantern.length === 0 ? <a className="newlist-a" href='outdoorgearpicker.now.sh/editcampingproductsearch?type=lantern'>Add lantern</a> : <td className="list-td">{this.state.lantern}</td>}
+                        {this.state.lantern.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.lanternPrice}</td>}
+                        {this.state.lantern.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.ll}>Buy Now!</button></td> : <td className="no-td"></td>}
+                        {this.state.lantern.length !== 0 ? <button className="list-delete" value="lantern" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">firstaid</td>
-                        {this.state.firstaid.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.firstaidImage} /></td> : <td></td>}
-                        {this.state.firstaid.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.herokuapp.com/editcampingproductsearch?type=firstaid'>Add firstaid</a> : <td className="list-td">{this.state.firstaid}</td>}
-                        {this.state.firstaid.length === 0 ? <td></td> : <td className="list-td">${this.state.firstaidPrice}</td>}
-                        {this.state.firstaid.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.fal}>Buy Now!</button></td> : <td></td>}
-                        {this.state.firstaid.length !== 0 ? <button className="list-delete" value="firstaid" onClick={this.handleDelete.bind(this)}>X</button> : <td></td>}
+                        {this.state.firstaid.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.firstaidImage} /></td> : <td className="no-td"></td>}
+                        {this.state.firstaid.length === 0 ? <a className="newlist-a" href='outdoorgearpicker.now.sh/editcampingproductsearch?type=firstaid'>Add firstaid</a> : <td className="list-td">{this.state.firstaid}</td>}
+                        {this.state.firstaid.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.firstaidPrice}</td>}
+                        {this.state.firstaid.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.fal}>Buy Now!</button></td> : <td className="no-td"></td>}
+                        {this.state.firstaid.length !== 0 ? <button className="list-delete" value="firstaid" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">firestarter</td>
-                        {this.state.firestarter.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.firestarterImage} /></td> : <td></td>}
-                        {this.state.firestarter.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.herokuapp.com/editcampingproductsearch?type=firestarter'>Add firestarter</a> : <td className="list-td">{this.state.firestarter}</td>}
-                        {this.state.firestarter.length === 0 ? <td></td> : <td className="list-td">${this.state.firestarterPrice}</td>}
-                        {this.state.firestarter.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.fsl}>Buy Now!</button></td> : <td></td>}
-                        {this.state.firestarter.length !== 0 ? <button className="list-delete" value="firestarter" onClick={this.handleDelete.bind(this)}>X</button> : <td></td>}
+                        {this.state.firestarter.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.firestarterImage} /></td> : <td className="no-td"></td>}
+                        {this.state.firestarter.length === 0 ? <a className="newlist-a" href='outdoorgearpicker.now.sh/editcampingproductsearch?type=firestarter'>Add firestarter</a> : <td className="list-td">{this.state.firestarter}</td>}
+                        {this.state.firestarter.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.firestarterPrice}</td>}
+                        {this.state.firestarter.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.fsl}>Buy Now!</button></td> : <td className="no-td"></td>}
+                        {this.state.firestarter.length !== 0 ? <button className="list-delete" value="firestarter" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">Water Container</td>
-                        {this.state.watercontainer.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.watercontainerImage} /></td> : <td></td>}
-                        {this.state.watercontainer.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.herokuapp.com/editcampingproductsearch?type=watercontainer'>Add Water Container</a> : <td className="list-td">{this.state.watercontainer}</td>}
-                        {this.state.watercontainer.length === 0 ? <td></td> : <td className="list-td">${this.state.watercontainerPrice}</td>}
-                        {this.state.watercontainer.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.wcl}>Buy Now!</button></td> : <td></td>}
-                        {this.state.watercontainer.length !== 0 ? <button className="list-delete" value="watercontainer" onClick={this.handleDelete.bind(this)}>X</button> : <td></td>}
+                        {this.state.watercontainer.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.watercontainerImage} /></td> : <td className="no-td"></td>}
+                        {this.state.watercontainer.length === 0 ? <a className="newlist-a" href='outdoorgearpicker.now.sh/editcampingproductsearch?type=watercontainer'>Add Water Container</a> : <td className="list-td">{this.state.watercontainer}</td>}
+                        {this.state.watercontainer.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.watercontainerPrice}</td>}
+                        {this.state.watercontainer.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.wcl}>Buy Now!</button></td> : <td className="no-td"></td>}
+                        {this.state.watercontainer.length !== 0 ? <button className="list-delete" value="watercontainer" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">Water Filter</td>
-                        {this.state.waterfilter.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.waterfilterImage} /></td> : <td></td>}
-                        {this.state.waterfilter.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.herokuapp.com/editcampingproductsearch?type=waterfilter'>Add Water Filter</a> : <td className="list-td">{this.state.waterfilter}</td>}
-                        {this.state.waterfilter.length === 0 ? <td></td> : <td className="list-td">${this.state.waterfilterPrice}</td>}
-                        {this.state.waterfilter.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.wfl}>Buy Now!</button></td> : <td></td>}
-                        {this.state.waterfilter.length !== 0 ? <button className="list-delete" value="waterfilter" onClick={this.handleDelete.bind(this)}>X</button> : <td></td>}
+                        {this.state.waterfilter.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.waterfilterImage} /></td> : <td className="no-td"></td>}
+                        {this.state.waterfilter.length === 0 ? <a className="newlist-a" href='outdoorgearpicker.now.sh/editcampingproductsearch?type=waterfilter'>Add Water Filter</a> : <td className="list-td">{this.state.waterfilter}</td>}
+                        {this.state.waterfilter.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.waterfilterPrice}</td>}
+                        {this.state.waterfilter.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.wfl}>Buy Now!</button></td> : <td className="no-td"></td>}
+                        {this.state.waterfilter.length !== 0 ? <button className="list-delete" value="waterfilter" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
                    </tr>
-                   <tr className="list-tr">
+                   <tr className="list-tr-price">
                         <th className="list-th"></th>
-                        <th className="list-th">Final Price</th>
-                        <th className="list-th" >${this.state.finalPrice.toFixed(2)}</th>
+                        <th className="list-th"></th>
+                        <th className="list-th"></th>
+                        <th className="list-th" >Final Price ${this.state.finalPrice.toFixed(2)}</th>
                    </tr>
                </table>
                {this.state.hasChanged === true ? <button className="list-save" onClick={this.handleSave.bind(this)}>Save Delete</button> : null}

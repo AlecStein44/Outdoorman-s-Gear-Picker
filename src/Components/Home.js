@@ -1,6 +1,7 @@
 import React from 'react'
 
 class Home extends React.Component {
+    //outdoorgearpicker.now.sh/
 
     constructor (props) {
         super(props);
@@ -76,19 +77,19 @@ class Home extends React.Component {
     huntingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`https://outdoorgearpicker.herokuapp.com/huntinglist`)
+        window.location.assign(`outdoorgearpicker.now.sh/huntinglist`)
     }
 
     campingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`https://outdoorgearpicker.herokuapp.com/campinglist`)
+        window.location.assign(`outdoorgearpicker.now.sh/campinglist`)
     }
 
     fishingClick(data) {
         sessionStorage.setItem('active', data)
 
-        window.location.assign(`https://outdoorgearpicker.herokuapp.com/fishinglist`)
+        window.location.assign(`outdoorgearpicker.now.sh/fishinglist`)
     }
 
     handleDelete(e) {
@@ -134,31 +135,41 @@ class Home extends React.Component {
     render() {
         return(
             <main>
-                <div className="home-list">
-                    <h2 className="home-h2">Hunting List</h2>
-                    {this.state.hunting.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.huntingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleDelete.bind(this)}>X</button></section>})}
-                    <a href='https://outdoorgearpicker.herokuapp.com/newhuntinglist'><span className="home-plus" >&#43;</span></a>
+                <div className="home-list-wrapper">
+                    <div className="home-list">
+                        <h2 className="home-h2" id="home-hunting">Hunting List</h2>
+                        <div class='home-oldnew-list'>
+                            {this.state.hunting.length === 0 ? <p className="home-new-p">Click the plus sign to make a new list.</p> : null}
+                            {this.state.hunting.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.huntingClick(data)} >{data.replace("Hunting", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleDelete.bind(this)}>X</button></section>})}
+                            <a href='outdoorgearpicker.now.sh/newhuntinglist'><span className="home-plus" >&#43;</span></a>
+                        </div>
+                    </div>
+
+                    <div className="home-list">
+                        <h2 className="home-h2" id="home-camping">Camping List</h2>
+                        <div class='home-oldnew-list'>
+                            {this.state.camping.length === 0 ? <p className="home-new-p">Click the plus sign to make a new list.</p> : null}
+                            {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data.replace("Camping", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleCampingDelete.bind(this)}>X</button></section>})}
+                            <a href='outdoorgearpicker.now.sh/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
+                        </div>
+                    </div>
+
+                    <div className="home-list">
+                        <h2 className="home-h2" id="home-fishing">Fishing List</h2>
+                        <div class='home-oldnew-list'>
+                            {this.state.fishing.length === 0 ? <p className="home-new-p">Click the plus sign to make a new list.</p> : null}
+                            {this.state.fishing.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.fishingClick(data)} >{data.replace("Fishing", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleFishDelete.bind(this)}>X</button></section>})}
+                            <a href='outdoorgearpicker.now.sh/newfishinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
+                        </div>
+                    </div>    
                 </div>
-
-                <div className="home-list">
-                    <h2 className="home-h2">Hiking/Camping List</h2>
-                    {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleCampingDelete.bind(this)}>X</button></section>})}
-                    <a href='https://outdoorgearpicker.herokuapp.com/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
-                </div>
-
-                <div className="home-list">
-                    <h2 className="home-h2">Fishing List</h2>
-                    {this.state.fishing.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.fishingClick(data)} >{data}</h3> <button className="list-delete" value={index} onClick={this.handleFishDelete.bind(this)}>X</button></section>})}
-                    <a href='https://outdoorgearpicker.herokuapp.com/newfishinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
-                </div>    
-
                 <div className="home-random-div">
                     {this.state.fetchData.map(data => {
                         return(
                             <section className="home-random-section">
                                 <img className="home-random-img" src={data.image} />
                                 <p className="home-random-p">{data.name}</p>
-                                <button className="home-random-button" onClick={this.handleBuyNow.bind(this)} value={data.link}>Buy Now!</button>
+                                <button className="buybutton" onClick={this.handleBuyNow.bind(this)} value={data.link}>Buy Now!</button>
                             </section>
                         )
                     })}
