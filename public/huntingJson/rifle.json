@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Tikka T3x",
+            "caliber": "6.5 Creedmoor",
+            "price": 679.99,
+            "image": "https://www.sportsmans.com/medias/tikka-t3x-lite-stainless-steel-rifle-1442500-1.jpg?context=bWFzdGVyfGltYWdlc3wxNjA3ODB8aW1hZ2UvanBlZ3xpbWFnZXMvaGFjL2hmZi84OTY0NTQ2NDI4OTU4LmpwZ3wwMjJhNWQ3YmRhNGIwNWI1NGMzMGQ3OGRjNTgwZjc2MjEwOWQzNDBiYzdkZGQ4NzA2ZTU2MzgzYjc5OWQxZjRh",
+            "link": "https://www.cabelas.com/product/Tikka-T-X-Lite-Bolt-Action-Rifle-ndash-Blued-Black/2313227.uts"
+        },
+        {
+            "name": "AR 10",
+            "caliber": "308 Winchester",
+            "price": 1887.58,
+            "image": "https://www.cheaperthandirt.com/dw/image/v2/BDCK_PRD/on/demandware.static/-/Sites-ctd-master-catalog/default/dw99fdcae2/large/7-g22904.jpg?sw=800&sh=800",
+            "link": "https://www.cheaperthandirt.com/savage-arms-msr-10-long-range-.308-ar-semi-auto-rifle-.308-winchester-20-barrel-10-rounds-free-float-m-lok-hand-guard-magpul-prs-gen3-stock-matte-black/FC-011356229045.html"
+        },
+        {
+            "name": "AKM",
+            "caliber": "7.62x39",
+            "price": 899.99,
+            "image": "https://www.brownells.com/userdocs/skus/p_100039918_1.jpg",
+            "link": "https://www.brownells.com/firearms/rifles/semi-auto/military-classic-7-62x39-prod134592.aspx?avs%7cCartridge_1=CVV_7xzzx62%2bx%2b39%2bmm"
+        }
+    ]
+}

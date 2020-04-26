@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "LEUPOLD - VX-3I LRP 6.5-20X50MM SIDE FOCUS TMR RETICLE",
+            "Variable": "6.5-20",
+            "price": 1200,
+            "image": "https://cdn-us-ec.yottaa.net/53ff2f503c881650e20004c9/www.brownells.com/v~4b.10c/userdocs/products/p_526000643_2.jpg?yocs=p_",
+            "link": "https://www.brownells.com/optics-mounting/scopes/rifle-scopes/vx-3i-lrp-6-5-20x50mm-side-focus-tmr-reticle-prod101266.aspx?avs%7cMin.+Magnification_1=6xzzx5x"
+        },
+        {
+            "name": "Zeiss Conquest 3-9x40 MC Waterproof Riflescope Matte Black",
+            "Variable": "3-9",
+            "price": 1050,
+            "image": "https://op2.0ps.us/978-550-ffffff-no-upscale/opplanet-zeiss-3-9x40mm-conquest-riflescope-black.jpg",
+            "link": "https://www.opticsplanet.com/zeiss-3-9x40mm-conquest-rifle-scope-with-z-plex-reticle1.html"
+        },
+        {
+            "name": "Primary Arms Orion 4-14x44mm Riflescope, Color: Black, Tube Diameter: 30 mm",
+            "Variable": "4-14",
+            "price": 550,
+            "image": "https://op2.0ps.us/978-550-ffffff-no-upscale/opplanet-primary-arms-primary-arms-orion-4-14x44mm-riflescope-acss-orion-pa4-14xffp-orion-main.jpg",
+            "link": "https://www.opticsplanet.com/primary-arms-primary-arms-orion-4-14x44mm-riflescope-acss-orion.html"
+        }
+    ]
+}

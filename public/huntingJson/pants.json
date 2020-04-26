@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Field & Stream Men's Cotton Twill Pants",
+            "color": "REALTREE EDGE",
+            "price": 34.99,
+            "image": "https://dks.scene7.com/is/image/GolfGalaxy/18FNSMFSCTTNTWLLPAPB_Realtree_EDGE?qlt=70&wid=1100&fmt=webp",
+            "link": "https://www.dickssportinggoods.com/p/field-stream-mens-cotton-twill-pants-18fnsmfscttntwllpapb/18fnsmfscttntwllpapb"
+        },
+        {
+            "name": "NOMAD Men's NWTF Turkey Hunting Pants",
+            "color": "MOSSY OAK GREENLEAF",
+            "price": 59.99,
+            "image": "https://dks.scene7.com/is/image/GolfGalaxy/18NOMMNWTFTRKYPNTAPB_Mossy_Oak_Greenleaf?qlt=70&wid=1100&fmt=webp",
+            "link": "https://www.dickssportinggoods.com/p/nomad-mens-nwtf-turkey-hunting-pants-18nommnwtftrkypntapb/18nommnwtftrkypntapb"
+        },
+        {
+            "name": "Field & Stream Men's Every Hunt Softshell Hunting Pants",
+            "color": "REALTREE EDGE",
+            "price": 49.97,
+            "image": "https://dks.scene7.com/is/image/GolfGalaxy/18FNSMVRYHNTSFTSHAPB_Realtree_EDGE?wid=2000&fmt=pjpeg",
+            "link": "https://www.dickssportinggoods.com/p/field-stream-mens-every-hunt-softshell-hunting-pants-18fnsmvryhntsftshapb/18fnsmvryhntsftshapb"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Cabela's Logo Patch Beanie for Kids",
+            "color": "orange",
+            "price": 14.99,
+            "image": "https://images.cabelas.com/is/image/Cabelas/s7_928439_renderset_01?",
+            "link": "https://www.basspro.com/shop/en/cabelas-logo-patch-beanie-for-kids"
+        },
+        {
+            "name": "Bass Pro Shops® Men's Tonal Logo Cap",
+            "color": "green camo",
+            "price": 24.99,
+            "image": "https://dks.scene7.com/is/image/GolfGalaxy/19NOMMCMSTRTCHCPXAPAA_Mossy_Oak_Bottomland?qlt=70&wid=1100&fmt=webp",
+            "link": "https://www.dickssportinggoods.com/p/nomad-mens-camo-stretch-hat-19nommcmstrtchcpxapaa/19nommcmstrtchcpxapaa"
+        },
+        {
+            "name": "Camo Face Mask Hunting Mask",
+            "color": "wood camo",
+            "price": 13.97,
+            "image": "https://images-na.ssl-images-amazon.com/images/I/61hGHXoZr8L._AC_SL1000_.jpg",
+            "link": "https://www.amazon.com/DecoyPro-Camo-Face-Mask-Camouflage/dp/B077H4ZP84"
+        }
+    ]
+}
