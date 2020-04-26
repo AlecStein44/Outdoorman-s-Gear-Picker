@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Leupold RX-2800 TBR/W with DNA Laser Rangefinder 7x OLED Selectable",
+            "power": "7x",
+            "price": 549.99,
+            "image": "https://media.mwstatic.com/product-images/src/Primary/873/873497.jpg?imwidth=2200",
+            "link": "https://www.midwayusa.com/product/101963644?pid=873497"
+        },
+        {
+            "name": "Vortex Optics Impact 850 Laser Rangefinder 6x",
+            "power": "6x",
+            "price": 199.99,
+            "image": "https://media.mwstatic.com/product-images/src/Primary/725/725399.jpg?imwidth=2200",
+            "link": "https://www.midwayusa.com/product/1019439172?pid=725399"
+        },
+        {
+            "name": "Sig Sauer KILO3000BDX Ballistic Data Xchange Laser Rangefinding Binocular 10x 42mm OD Green",
+            "power": "10x",
+            "price": 959.99,
+            "image": "https://media.mwstatic.com/product-images/src/Primary/300/300827.jpg?imwidth=2200",
+            "link": "https://www.midwayusa.com/product/1020170418?pid=300827"
+        }
+    ]
+}

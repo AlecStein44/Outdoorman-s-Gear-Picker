@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Columbia Terminal Tackle Pants for Men",
+            "color": "City Grey",
+            "price": 60,
+            "image": "https://images-na.ssl-images-amazon.com/images/I/31hGZAXXDUL._SX38_SY50_CR,0,0,38,50_.jpg",
+            "link": "https://www.amazon.com/Columbia-Terminal-Tackle-Pant/dp/B07J49BTJT"
+        },
+        {
+            "name": "World Wide Sportsman Crest Pants for Men",
+            "color": "White Pepper",
+            "price": 48,
+            "image": "https://images.cabelas.com/is/image/Cabelas/s7_965166_renderset_01?wid=127&op_sharpen=1&hei=127",
+            "link": "https://www.cabelas.com/product/MENS-WORLD-WIDE-SPORTSMAN-HYBRID-II-PANTS/2861293.uts"
+        },
+        {
+            "name": "Cabela's Guidewear® Men's Angler Pants with GORE-TEX® – Regular",
+            "color": "Black",
+            "price": 153.77,
+            "image": "data:image/jpeg;base64,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",
+            "link": "https://www.cabelas.com/product/Cabelas-Mens-Guidewear-reg-BassinPants/2203152.uts"
+        }
+    ]
+}

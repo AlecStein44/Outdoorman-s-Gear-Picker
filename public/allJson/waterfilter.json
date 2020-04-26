@@ -1,0 +1,25 @@
+{
+    "DATA": [
+        {
+            "name": "Katadyn Vario Microfilter",
+            "speed": "2 Quarts per minute",
+            "price": 94.99,
+            "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSaLySqIF_XPdo9vvu1MRGqX_Wf3dpQaYTgLne9tKlDj1PBC3t0bBbqWKP_D4ogzQ&usqp=CAc",
+            "link": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwikz-nP0vfoAhXBPa0GHYiiBBcYABAEGgJwdg&ohost=www.google.com&cid=CAESQOD29ajh6MAndq-5W8hL7NlFd44pVvGKg8glhOJOrYlAHGXNU0yOmv7FoRa_BmKPx5PwIl4rQkt0fsSw7meSKQ0&sig=AOD64_3ImswEkQnNPzUvjm7LL1kZh2IRug&ctype=5&q=&ved=2ahUKEwjxq-HP0vfoAhXVIDQIHeUrB_kQwg96BAgNEDI&adurl="
+        },
+        {
+            "name": "MSR MiniWorks Ceramic Filter",
+            "speed": "1 Liter per minute",
+            "price": 89.99,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSd1DV7l7V4TNFKGxuW1uVUkClC5RMsp6mpRYXTqcDsKqoFKaqGxxIALYEvyVl0EfxpXb8wJY0K3Xk&usqp=CAc",
+            "link": "https://www.rei.com/product/695265/msr-miniworks-ex-water-filter?CAWELAID=120217890000859054"
+        },
+        {
+            "name": "MSR Guardian Portable Water Purifier",
+            "speed": "2.5 Liters per minute",
+            "price": 349.99,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTh676RSVB5V0mjciTrfUZ_erDVMlZsyKg6KYi3UGkYi0PcWlZFDS8rR2q-WD909EOVaejEc5I6Xg&usqp=CAc",
+            "link": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiX5MHj0vfoAhXfH60GHfPdAHsYABAHGgJwdg&ohost=www.google.com&cid=CAESQOD2w-o-GOScVEsidJXBM3lUC_k2uBb-kiPxJo3IckYZklPKibtdhImGxpvgS-t31_026tMEbuSG-kOgU0ZAw_Q&sig=AOD64_0y8rN4qsRJPzm2EIaFGDgXPM2zGA&ctype=5&q=&ved=2ahUKEwj-vrjj0vfoAhUrJzQIHVBYCXYQwg96BAgNEDI&adurl="
+        }
+    ]
+}
