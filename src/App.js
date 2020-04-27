@@ -36,7 +36,6 @@ class App extends Component {
           <Route path='/editproductsearch' component={EditProductSearch} />
           <Route path='/editcampingproductsearch' component={CampingEditProductSearch} />
           <Route path='/editfishingproductsearch' component={fishingEditProductSearch} />
-          <Route component={notFound} />
         </Switch>
      </BrowserRouter>
     );
