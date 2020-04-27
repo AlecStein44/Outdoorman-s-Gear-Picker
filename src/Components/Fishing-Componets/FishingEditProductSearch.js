@@ -78,7 +78,7 @@ class FishingEditProductSearch extends React.Component {
 
         localStorage.setItem(this.state.listName, JSON.stringify(editParse))
 
-        window.location.assign('http://localhost:3000/fishinglist')
+        window.location.assign('https://outdoorgearpicker.now.sh/fishinglist')
     }
 
     render() {
@@ -101,7 +101,7 @@ class FishingEditProductSearch extends React.Component {
                              </tr> )
                 })}
                 </table>
-                <button className="list-back" onClick={() => { window.location.assign('http://localhost:3000/fishinglist') }}>Back</button>
+                <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/fishinglist') }}>Back</button>
             </main>
         )
     }
