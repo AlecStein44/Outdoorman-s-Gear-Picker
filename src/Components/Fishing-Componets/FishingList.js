@@ -138,7 +138,8 @@ class FishingList extends React.Component {
 
     render() {
         return(
-            <main>
+            <main className="main-class">
+                <h2 className="list-h2-topname">{this.state.results.listName}</h2>
                 <table className="list-table">
                    <tr className="list-tr">
                        <th className="list-th">Gear Type</th>
@@ -152,63 +153,63 @@ class FishingList extends React.Component {
                         {this.state.fishingrod.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=fishingrod'>Add Fishing Rod</a></td> : <td className="list-td">{this.state.fishingrod}</td>}
                         {this.state.fishingrod.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.fishingrodPrice}</td>}
                         {this.state.fishingrod.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.frl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                        {this.state.fishingrod.length !== 0 ? <button className="list-delete" value="fishingrod" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
+                        {this.state.fishingrod.length !== 0 ? <td className="list-td"><button className="list-delete" value="fishingrod" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">Reel</td>
                         {this.state.reel.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.reelImage} /></td> : <td className="no-td"></td>}
-                        {this.state.reel.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=reel'>Add Reel</a> : <td className="list-td">{this.state.reel}</td>}
+                        {this.state.reel.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=reel'>Add Reel</a></td> : <td className="list-td">{this.state.reel}</td>}
                         {this.state.reel.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.reelPrice}</td>}
                         {this.state.reel.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.rl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                        {this.state.reel.length !== 0 ? <button className="list-delete" value="reel" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
+                        {this.state.reel.length !== 0 ? <td className="list-td"><button className="list-delete" value="reel" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">Bait</td>
                         {this.state.bait.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.baitImage} /></td> : <td className="no-td"></td>}
-                        {this.state.bait.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=bait'>Add Bait</a> : <td className="list-td">{this.state.bait}</td>}
+                        {this.state.bait.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=bait'>Add Bait</a></td> : <td className="list-td">{this.state.bait}</td>}
                         {this.state.bait.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.baitPrice}</td>}
                         {this.state.bait.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.bl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                        {this.state.bait.length !== 0 ? <button className="list-delete" value="bait" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
+                        {this.state.bait.length !== 0 ? <td className="list-td"><button className="list-delete" value="bait" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">HeadWear</td>
                         {this.state.headwear.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.headwearImage} /></td> : <td className="no-td"></td>}
-                        {this.state.headwear.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=headwear'>Add HeadWear</a> : <td className="list-td">{this.state.headwear}</td>}
+                        {this.state.headwear.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=headwear'>Add HeadWear</a></td> : <td className="list-td">{this.state.headwear}</td>}
                         {this.state.headwear.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.headwearPrice}</td>}
                         {this.state.headwear.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hwl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                        {this.state.headwear.length !== 0 ? <button className="list-delete" value="headwear" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
+                        {this.state.headwear.length !== 0 ? <td className="list-td"><button className="list-delete" value="headwear" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">Vest</td>
                         {this.state.vest.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.vestImage} /></td> : <td className="no-td"></td>}
-                        {this.state.vest.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=vest'>Add Vest</a> : <td className="list-td">{this.state.vest}</td>}
+                        {this.state.vest.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=vest'>Add Vest</a></td> : <td className="list-td">{this.state.vest}</td>}
                         {this.state.vest.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.vestPrice}</td>}
                         {this.state.vest.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.vl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                        {this.state.vest.length !== 0 ? <button className="list-delete" value="vest" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
+                        {this.state.vest.length !== 0 ? <td className="list-td"><button className="list-delete" value="vest" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">Pants</td>
                         {this.state.pants.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.pantsImage} /></td> : <td className="no-td"></td>}
-                        {this.state.pants.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=pants'>Add Pants</a> : <td className="list-td">{this.state.pants}</td>}
+                        {this.state.pants.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=pants'>Add Pants</a></td> : <td className="list-td">{this.state.pants}</td>}
                         {this.state.pants.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.pantsPrice}</td>}
                         {this.state.pants.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.pl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                        {this.state.pants.length !== 0 ? <button className="list-delete" value="pants" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
+                        {this.state.pants.length !== 0 ? <td className="list-td"><button className="list-delete" value="pants" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">Hooks</td>
                         {this.state.hooks.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.hooksImage} /></td> : <td className="no-td"></td>}
-                        {this.state.hooks.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=hooks'>Add Hooks</a> : <td className="list-td">{this.state.hooks}</td>}
+                        {this.state.hooks.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=hooks'>Add Hooks</a></td> : <td className="list-td">{this.state.hooks}</td>}
                         {this.state.hooks.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hooksPrice}</td>}
                         {this.state.hooks.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                        {this.state.hooks.length !== 0 ? <button className="list-delete" value="hooks" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
+                        {this.state.hooks.length !== 0 ? <td className="list-td"><button className="list-delete" value="hooks" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr">
                         <td className="list-td">Tackle Box</td>
                         {this.state.tacklebox.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.tackleboxImage} /></td> : <td className="no-td"></td>}
-                        {this.state.tacklebox.length === 0 ? <a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=tacklebox'>Add Tackle Box</a> : <td className="list-td">{this.state.tacklebox}</td>}
+                        {this.state.tacklebox.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editfishingproductsearch?type=tacklebox'>Add Tackle Box</a></td> : <td className="list-td">{this.state.tacklebox}</td>}
                         {this.state.tacklebox.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.tackleboxPrice}</td>}
                         {this.state.tacklebox.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.tbl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                        {this.state.tacklebox.length !== 0 ? <button className="list-delete" value="tacklebox" onClick={this.handleDelete.bind(this)}>X</button> : <td className="no-td"></td>}
+                        {this.state.tacklebox.length !== 0 ? <td className="list-td"><button className="list-delete" value="tacklebox" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                    </tr>
                    <tr className="list-tr-price">
                         <th className="list-th"></th>

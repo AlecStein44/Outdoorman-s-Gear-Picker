@@ -215,7 +215,8 @@ class HuntingNewList extends React.Component {
     
     render() {
         return(
-            <main>
+            <main className="main-class">
+                <h2 className="list-h2-topname">Hunting New List</h2>
                 <table className="list-table">
                     <tr className="list-tr-th">
                        <th className="list-th">Gear Type</th>

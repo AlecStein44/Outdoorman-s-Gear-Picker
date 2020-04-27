@@ -78,7 +78,7 @@ class EditProductSearch extends React.Component {
 
         localStorage.setItem(this.state.listName, JSON.stringify(editParse))
 
-        window.location.assign('https://outdoorgearpicker.now.sh/huntinglist')
+        window.location.assign('http://localhost:3000/huntinglist')
     }
 
     render() {
@@ -95,13 +95,13 @@ class EditProductSearch extends React.Component {
                 {this.state.results.map((data, j)  => {
                     return ( <tr className="list-tr">
                                 <td className="list-td"><img className="list-image" src={data.image} /></td>
-                                <button type="button" onClick={this.handleClick.bind(this)} value={data.name} id={j}>Add {data.name}</button>
+                                <td className="list-td"><button className="list-button" type="button" onClick={this.handleClick} value={data.name} id={j}>Add {data.name}</button></td>
                                 <td className="list-td">{this.state.secondData[j]}</td>
                                 <td className="list-td">${data.price}</td>
                              </tr> )
                 })}
                 </table>
-                <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/huntinglist') }}>Back</button>
+                <button className="list-back" onClick={() => { window.location.assign('http://localhost:3000/huntinglist') }}>Back</button>
             </main>
         )
     }

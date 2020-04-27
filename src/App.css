@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.header-h1 {
+  font-family: 'Passion One', cursive, sans-serif;
+}
+
 @media screen and (min-width: 1333px) {
   header {
     display: flex;
@@ -15,12 +19,19 @@
   .header-a {
     margin: 10px;
     color: white;
+    border: 1px solid grey;
+    border-radius: 1px;
+    padding: 10px;
+  }
+
+  .header-a:hover {
+    background-color: rgb(27, 31, 24);
   }
   
   .header-h1 {
-    font-size: 35px;
+    font-size: 45px;
     color: white;
-    margin-left: 100px;
+    margin: 10px 100px;
     text-decoration: none;
   }
   
@@ -95,8 +106,9 @@
   }
   
   .home-list-delete {
+    font-size: 15px;
     height: 25px;
-    width: 30px;
+    width: 25px;
     margin-left: 15px;
     margin-top: 5px;
     background: white;
@@ -167,11 +179,35 @@
   }
   
   h3 {
+    padding: 6px;
+    margin-left: 5px;
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
     cursor: pointer;
+  }
+
+  h3:hover {
+    background-color: #2D3328;
+    color: white;
   }
   
   main {
     margin: 5rem;
+  }
+
+  .main-class {
+    margin: 1rem;
+  }
+
+  .list-h2-topname {
+    text-align: center;
+    margin: 0px auto 2% auto;
+    padding: 50px;
+    font-size: 40px;
+    width: 30%;
+    border-radius: 1px;
   }
   
   .list-table {
@@ -241,9 +277,11 @@
   
   .list-back {
     padding: 5px;
-    margin-left: 5px;
-    background-color: #4C5030;
+    margin: 30px 10%;
+    background-color: #75744B;
     color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
     cursor: pointer;
   }
   
@@ -314,11 +352,19 @@
   .header-a {
     margin: 10px;
     color: white;
+    border: 1px solid grey;
+    border-radius: 1px;
+    padding: 10px;
+  }
+
+  .header-a:hover {
+    background-color: rgb(27, 31, 24);
   }
   
   .header-h1 {
-    font-size: 35px;
+    font-size: 45px;
     color: white;
+    margin: 10px 100px;
     text-decoration: none;
   }
   
@@ -393,14 +439,16 @@
   }
   
   .home-list-delete {
+    font-size: 15px;
     height: 25px;
-    width: 30px;
+    width: 25px;
     margin-left: 15px;
     margin-top: 5px;
     background: white;
     border: 1px solid black;
     cursor: pointer;
   }
+  
   
   .home-list-delete:hover {
     background-color: #2D3328;
@@ -466,11 +514,35 @@
   }
   
   h3 {
+    padding: 6px;
+    margin-left: 5px;
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
     cursor: pointer;
+  }
+
+  h3:hover {
+    background-color: #2D3328;
+    color: white;
   }
   
   main {
     margin: 5rem;
+  }
+
+  .main-class {
+    margin: 1rem;
+  }
+
+  .list-h2-topname {
+    text-align: center;
+    margin: 0px auto 2% auto;
+    padding: 50px;
+    font-size: 40px;
+    width: 50%;
+    border-radius: 1px;
   }
   
   .list-table {
@@ -540,9 +612,11 @@
   
   .list-back {
     padding: 5px;
-    margin-left: 5px;
-    background-color: #4C5030;
+    margin: 30px 10%;
+    background-color: #75744B;
     color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
     cursor: pointer;
   }
   
@@ -612,6 +686,13 @@
   .header-a {
     margin: 10px;
     color: white;
+    border: 1px solid grey;
+    border-radius: 1px;
+    padding: 10px;
+  }
+
+  .header-a:hover {
+    background-color: rgb(27, 31, 24);
   }
   
   .header-h1 {
@@ -623,7 +704,7 @@
   
   nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
   }
@@ -694,14 +775,16 @@
   }
   
   .home-list-delete {
+    font-size: 15px;
     height: 25px;
-    width: 30px;
+    width: 25px;
     margin-left: 15px;
     margin-top: 5px;
     background: white;
     border: 1px solid black;
     cursor: pointer;
   }
+  
   
   .home-list-delete:hover {
     background-color: #2D3328;
@@ -767,11 +850,37 @@
   }
   
   h3 {
+    padding: 6px;
+    margin-left: 5px;
+    background-color: #75744B;
+    color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
     cursor: pointer;
+  }
+
+  h3:hover {
+    background-color: #2D3328;
+    color: white;
   }
   
   main {
-    margin: 5rem;
+    margin: 1rem;
+  }
+
+  .main-class {
+    margin: 1rem;
+  }
+
+  .list-h2-topname {
+    text-align: center;
+    margin: 0px auto 2% auto;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 30px;
+    width: 80%;
+    border-radius: 1px;
+    text-overflow: ellipsis;
   }
   
   table {
@@ -865,9 +974,11 @@
   
   .list-back {
     padding: 5px;
-    margin-left: 5px;
-    background-color: #4C5030;
+    margin: 30px 10%;
+    background-color: #75744B;
     color: white;
+    border: 1px solid lightslategray;
+    border-radius: 3px;
     cursor: pointer;
   }
   

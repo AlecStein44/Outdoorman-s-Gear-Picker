@@ -68,7 +68,7 @@ class CampingProductSearch extends React.Component {
 
         sessionStorage.setItem(this.state.params, JSON.stringify(selected))
 
-        window.location.assign('https://outdoorgearpicker.now.sh/newcampinglist')
+        window.location.assign('http://localhost:3000/newcampinglist')
     }
 
     render() {
@@ -84,14 +84,14 @@ class CampingProductSearch extends React.Component {
                     </tr>
                 {this.state.results.map((data, j)  => {
                     return ( <tr className="list-tr">            
-                                <button type="button" onClick={this.handleClick} value={data.name} id={j}>Add {data.name}</button>
+                                <td className="list-td"><button className="list-button" type="button" onClick={this.handleClick} value={data.name} id={j}>Add {data.name}</button></td>
                                 <td className="list-td"><img className="list-image" src={data.image} /></td>   
                                 <td className="list-td">{this.state.secondData[j]}</td>
                                 <td className="list-td">${data.price}</td>
                              </tr> )
                 })}
                 </table>
-                <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/newcampinglist') }}>Back</button>
+                <button className="list-back" onClick={() => { window.location.assign('http://localhost:3000/newcampinglist') }}>Back</button>
             </main>
         )
     }
