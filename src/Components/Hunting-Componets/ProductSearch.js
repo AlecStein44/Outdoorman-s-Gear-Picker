@@ -14,18 +14,26 @@ class ProductSearch extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`./huntingJson/${this.state.params}.json`).then(response => {
+        fetch(`https://api.impact.com/Mediapartners/IRSYkqTyNep22276244pB9TuBUoBytYTN1/Catalogs/ItemSearch?Query=Category='GUNS'`, {
+            method: 'GET',
+            redirect: 'follow',
+            credentials: 'include',
+            headers: {
+                'Authorization': 'Basic '+btoa('IRSYkqTyNep22276244pB9TuBUoBytYTN1:2GBhaG~vQWZBKpjTohvSJdracm~Sf9vh')
+            }
+        }).then(response => {
             console.log(response);
             return response.json();
           }).then(data => {
-            this.setState({
-                results: data.DATA
+            /*this.setState({
+                results: data
             })
-            this.handleSecond(data.DATA)
+            
+            this.handleSecond(data)*/
+            console.log(data)
           }).catch(error => {
             console.log(error);
           });
-
     }
 
     handleSecond(data) {
@@ -72,6 +80,7 @@ class ProductSearch extends React.Component {
     }
 
     render() {
+        console.log(this.state.results)
         return(
             <main>
                 <table className="list-table">
@@ -91,12 +100,10 @@ class ProductSearch extends React.Component {
                              </tr> )
                 })}
                 </table>
-                <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist') }}>Back</button>
+            <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist') }}>Back</button>
             </main>
         )
     }
 }
 
 export default ProductSearch
-
-//{this.state.results.map(data => {return <button type="button" onClick={this.handleClick} value={data.name} id={data.price}>Add {data.name}</button>})}
