@@ -15,19 +15,17 @@ class ProductSearch extends React.Component {
 
     componentDidMount() {
         fetch(`./huntingJson/${this.state.params}.json`).then(response => {
-        }).then(response => {
             console.log(response);
             return response.json();
           }).then(data => {
             this.setState({
                 results: data.DATA
             })
-            
-            this.handleSecond(data)
-            console.log(data)
+            this.handleSecond(data.DATA)
           }).catch(error => {
             console.log(error);
           });
+
     }
 
     handleSecond(data) {
