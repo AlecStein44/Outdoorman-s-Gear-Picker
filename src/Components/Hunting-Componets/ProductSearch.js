@@ -27,6 +27,9 @@ class ProductSearch extends React.Component {
           });*/
 
 var myHeaders = new Headers(); 
+
+myHeaders.append("Access-Control-Allow-Headers", "Authorization, Accept");
+
 myHeaders.append("Accept", "application/json"); 
 myHeaders.append("Authorization", "Basic SVJTWWtxVHlOZXAyMjI3NjI0NHBCOVR1QlVvQnl0WVROMToyR0JoYUd+dlFXWkJLcGpUb2h2U0pkcmFjbX5TZjl2aA==");
 myHeaders.append("Cookie", "__cfduid=db5c683bcca0ddcdd9fcc40acd1f0354e1588710563");
