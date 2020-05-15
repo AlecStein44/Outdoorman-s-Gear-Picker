@@ -14,22 +14,16 @@ class ProductSearch extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`https://api.impact.com/Mediapartners/IRSYkqTyNep22276244pB9TuBUoBytYTN1/Catalogs/ItemSearch?Query=Category='GUNS'`, {
-            method: 'GET',
-            redirect: 'follow',
-            credentials: 'include',
-            headers: {
-                'Authorization': 'Basic '+btoa('IRSYkqTyNep22276244pB9TuBUoBytYTN1:2GBhaG~vQWZBKpjTohvSJdracm~Sf9vh')
-            }
+        fetch(`./huntingJson/${this.state.params}.json`).then(response => {
         }).then(response => {
             console.log(response);
             return response.json();
           }).then(data => {
-            /*this.setState({
-                results: data
+            this.setState({
+                results: data.DATA
             })
             
-            this.handleSecond(data)*/
+            this.handleSecond(data)
             console.log(data)
           }).catch(error => {
             console.log(error);
