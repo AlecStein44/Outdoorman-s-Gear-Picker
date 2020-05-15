@@ -42,8 +42,10 @@ redirect: 'follow'
 };
 
 fetch("https://api.impact.com/Mediapartners/IRSYkqTyNep22276244pB9TuBUoBytYTN1/Catalogs/ItemSearch?Query=Category='GUNS'", requestOptions) 
-.then(response => response.text()) 
-.then(result => console.log(result)) 
+ .then(response => {
+            console.log(response);
+            return response.json();
+          })
 .catch(error => console.log('error', error));
 
     }
