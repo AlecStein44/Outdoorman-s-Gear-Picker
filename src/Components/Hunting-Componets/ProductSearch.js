@@ -14,7 +14,7 @@ class ProductSearch extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`./huntingJson/${this.state.params}.json`).then(response => {
+       /* fetch(`./huntingJson/${this.state.params}.json`).then(response => {
             console.log(response);
             return response.json();
           }).then(data => {
@@ -24,7 +24,24 @@ class ProductSearch extends React.Component {
             this.handleSecond(data.DATA)
           }).catch(error => {
             console.log(error);
-          });
+          });*/
+
+var myHeaders = new Headers(); 
+myHeaders.append("Accept", "application/json"); 
+myHeaders.append("Authorization", "Basic SVJTWWtxVHlOZXAyMjI3NjI0NHBCOVR1QlVvQnl0WVROMToyR0JoYUd+dlFXWkJLcGpUb2h2U0pkcmFjbX5TZjl2aA==");
+myHeaders.append("Cookie", "__cfduid=db5c683bcca0ddcdd9fcc40acd1f0354e1588710563");
+myHeaders.append("RequestCredentials", "omit");
+
+var requestOptions = { 
+method: 'GET', 
+headers: myHeaders, 
+redirect: 'follow' 
+};
+
+fetch("https://api.impact.com/Mediapartners/IRSYkqTyNep22276244pB9TuBUoBytYTN1/Catalogs/ItemSearch?Query=Category='GUNS'", requestOptions) 
+.then(response => response.text()) 
+.then(result => console.log(result)) 
+.catch(error => console.log('error', error));
 
     }
 
