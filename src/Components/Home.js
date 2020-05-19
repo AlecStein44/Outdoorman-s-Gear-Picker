@@ -1,7 +1,8 @@
 import React from 'react'
 
 class Home extends React.Component {
-    //https://outdoorgearpicker.now.sh/
+    //http://localahost:3000/
+    //https://outdoorgearapicker.now.sh/
 
     constructor (props) {
         super(props);
@@ -28,30 +29,7 @@ class Home extends React.Component {
           }).catch(error => {
             console.log(error);
           });
-        sessionStorage.removeItem('rifle')
-        sessionStorage.removeItem('ammo')
-        sessionStorage.removeItem('scope')
-        sessionStorage.removeItem('headwear')
-        sessionStorage.removeItem('shirt')
-        sessionStorage.removeItem('pants')
-        sessionStorage.removeItem('binos')
-        sessionStorage.removeItem('rangefinder')
-        sessionStorage.removeItem('fishingrod')
-        sessionStorage.removeItem('reel')
-        sessionStorage.removeItem('bait')
-        sessionStorage.removeItem('headwear')
-        sessionStorage.removeItem('vest')
-        sessionStorage.removeItem('pants')
-        sessionStorage.removeItem('hooks')
-        sessionStorage.removeItem('tacklebox')
-        sessionStorage.removeItem('tent')
-        sessionStorage.removeItem('bedding')
-        sessionStorage.removeItem('cookingstove')
-        sessionStorage.removeItem('lantern')
-        sessionStorage.removeItem('firstaid')
-        sessionStorage.removeItem('firestarter')
-        sessionStorage.removeItem('watercontainer')
-        sessionStorage.removeItem('waterfilter')
+        sessionStorage.clear()
 
         let huntingArray = []
         let campingArray = []
@@ -164,7 +142,7 @@ class Home extends React.Component {
                     </div>    
                 </div>
                 <div className="home-random-div">
-                    {this.state.fetchData.map(data => {
+                    {/*this.state.fetchData.map(data => {
                         return(
                             <section className="home-random-section">
                                 <img className="home-random-img" src={data.image} />
@@ -172,7 +150,7 @@ class Home extends React.Component {
                                 <button className="buybutton" onClick={this.handleBuyNow.bind(this)} value={data.link}>Buy Now!</button>
                             </section>
                         )
-                    })}
+                    })*/}
                 </div>
             </main>
         )
