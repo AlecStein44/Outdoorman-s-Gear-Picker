@@ -38,7 +38,7 @@ class ProductSearch extends React.Component {
     }
 
     componentDidMount() {
-     fetch(`https://outdoorgearpicker-server.herokuapp.com//${this.state.params}`, {
+     fetch(`https://outdoorgearpicker-server.herokuapp.com/${this.state.params}`, {
         headers: {
             'Accept': 'application/json',
         },
@@ -246,7 +246,7 @@ class ProductSearch extends React.Component {
     handleNext(e) {
         let newUri = this.state.nextUri
         console.log(newUri)
-        fetch(`https://outdoorgearpicker-server.herokuapp.com//nextpage?uri=${newUri}`, {
+        fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${newUri}`, {
             headers: {
                 'Accept': 'application/json',
             },
@@ -268,7 +268,7 @@ class ProductSearch extends React.Component {
     handlePrev(e) {
         let newUri = this.state.prevUri
         console.log(newUri)
-        fetch(`https://outdoorgearpicker-server.herokuapp.com//prevpage?uri=${newUri}`, {
+        fetch(`https://outdoorgearpicker-server.herokuapp.com/prevpage?uri=${newUri}`, {
             headers: {
                 'Accept': 'application/json',
             },
