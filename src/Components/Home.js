@@ -17,6 +17,12 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
+        fetch(`https://outdoorgearpicker-server.herokuapp.com/`, {
+        headers: {
+            'Accept': 'application/json',
+        },
+      })
+        
         let ranNum = Math.floor(Math.random()*this.state.arrJson.length)
         fetch(`./allJson/${this.state.arrJson[ranNum]}`).then(response => {
             console.log(response);
