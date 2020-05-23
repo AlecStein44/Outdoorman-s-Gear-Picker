@@ -17,12 +17,6 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`https://outdoorgearpicker-server.herokuapp.com/`, {
-        headers: {
-            'Accept': 'application/json',
-        },
-      })
-        
         let ranNum = Math.floor(Math.random()*this.state.arrJson.length)
         fetch(`./allJson/${this.state.arrJson[ranNum]}`).then(response => {
             console.log(response);
@@ -44,7 +38,7 @@ class Home extends React.Component {
             if(this.state.results[i].includes('Hunting')){
                 huntingArray.push(this.state.results[i])
             }
-            if(this.state.results[i].includes('Camping')){
+            if(this.state.results[i].includes('Hiking')){
                 campingArray.push(this.state.results[i])
             }
             if(this.state.results[i].includes('Fishing')){
@@ -130,10 +124,10 @@ class Home extends React.Component {
                     </div>
 
                     <div className="home-list">
-                        <h2 className="home-h2" id="home-camping">Camping List</h2>
+                        <h2 className="home-h2" id="home-camping">Hiking List</h2>
                         <div class='home-oldnew-list'>
                         <p className="home-new-p">Click <a href='https://outdoorgearpicker.now.sh/newcampinglist'>here</a> or the plus sign to make a new list.</p>
-                            {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data.replace("Camping", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleCampingDelete.bind(this)}>X</button></section>})}
+                            {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data.replace("Hiking", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleCampingDelete.bind(this)}>X</button></section>})}
                             <a href='https://outdoorgearpicker.now.sh/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
                         </div>
                     </div>
