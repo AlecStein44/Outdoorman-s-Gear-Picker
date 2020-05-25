@@ -56,7 +56,6 @@ class ProductSearch extends React.Component {
                 prevUri: data['@firstpageuri'],
                 resultsloaded: true
             })
-            console.log(data['@nextpageuri'])
             this.selectFilter()
           }).catch(error => {
             console.log(error);
@@ -290,6 +289,7 @@ class ProductSearch extends React.Component {
     }
 
     render() {
+        console.log(this.state.resultsloaded)
         return(
             <main>
                 <div className='div-filter'>
@@ -330,7 +330,6 @@ class ProductSearch extends React.Component {
                         <button className="filter-reset" onClick={this.filterReset.bind(this)}>Reset</button>
                     </div>
                 </form> : null}
-                {this.resultsloaded === false ? <p>Please wait while your products are loading. This might take some time.</p> : null}
                 <table className="list-table">
                     <tr className="list-tr">
                         <th className="list-th">{this.state.params.charAt(0).toUpperCase() + 
@@ -339,6 +338,7 @@ class ProductSearch extends React.Component {
                         <th className="list-th">Manufacturer</th>
                         <th className="list-th">Gear Price</th>
                     </tr>
+                    {this.state.resultsloaded === false ? <p>Please wait while your products are loading. This might take some time.</p> : null}
                 {this.state.results.map((data, j)  => {
                     return ( <tr className="list-tr">            
                                 <td className="list-td"><button className="list-button" type="button" onClick={this.handleClick} value={data.Name} id={j}>Add {data.Name}</button></td>
