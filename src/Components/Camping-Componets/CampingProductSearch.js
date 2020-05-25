@@ -6,6 +6,7 @@ class CampingProductSearch extends React.Component {
         this.state = {
             results: [],
             oldResults: [],
+            resultsloaded: false,
             nextUri: 'test',
             prevUri: 'test',
             search: '',
@@ -53,6 +54,7 @@ class CampingProductSearch extends React.Component {
                 oldResults: data.Items,
                 nextUri: data['@nextpageuri'],
                 prevUri: data['@firstpageuri'],
+                resultsloaded: true
             })
             console.log(data['@nextpageuri'])
             this.selectFilter()
@@ -328,6 +330,7 @@ class CampingProductSearch extends React.Component {
                         <button className="filter-reset" onClick={this.filterReset.bind(this)}>Reset</button>
                     </div>
                 </form> : null}
+                {this.resultsloaded === false ? <p>Please wait while your products are loading. This might take some time.</p> : null}
                 <table className="list-table">
                     <tr className="list-tr">
                         <th className="list-th">{this.state.params.charAt(0).toUpperCase() + 
