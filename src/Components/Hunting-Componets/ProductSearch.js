@@ -64,6 +64,7 @@ class ProductSearch extends React.Component {
     }
 
     handleNextApi(uri) {
+        console.log('It Fired!')
         fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
             headers: {
                 'Accept': 'application/json',
@@ -81,6 +82,7 @@ class ProductSearch extends React.Component {
     }
 
     handlePrevApi(uri) {
+        console.log('It Fired!')
         fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
             headers: {
                 'Accept': 'application/json',
