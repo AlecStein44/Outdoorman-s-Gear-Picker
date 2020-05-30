@@ -39,30 +39,64 @@ class FishingProductSearch extends React.Component {
     }
 
     componentDidMount() {
-     fetch(`https://outdoorgearpicker-server.herokuapp.com/${this.state.params}`, {
-        headers: {
-            'Accept': 'application/json',
-        },
-      })
-      .then(response => {return response.json()})
-      .then(data => {
-          JSON.stringify(data)
-          console.log(typeof data)
-          //let parseData = JSON.parse(data)
-            this.setState({
-                results: data.Items,
-                oldResults: data.Items,
-                nextUri: data['@nextpageuri'],
-                prevUri: data['@firstpageuri'],
-                resultsloaded: true
-            })
-            console.log(data['@nextpageuri'])
-            this.selectFilter()
-          }).catch(error => {
-            console.log(error);
-          });
+        fetch(`https://outdoorgearpicker-server.herokuapp.com/${this.state.params}`, {
+           headers: {
+               'Accept': 'application/json',
+           },
+         })
+         .then(response => {return response.json()})
+         .then(data => {
+             JSON.stringify(data)
+             console.log(JSON.stringify(data.Items))
+             //let parseData = JSON.parse(data)
+               this.setState({
+                   results: data.Items,
+                   oldResults: data.Items,
+                   resultsloaded: true
+               })
+               this.handleNextApi(data['@nextpageuri'])
+               this.handlePrevApi(data['@firstpageuri'])
+               this.selectFilter()
+             }).catch(error => {
+               console.log(error);
+             });
+   
+       }
+   
+       handleNextApi(uri) {
+           fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
+               headers: {
+                   'Accept': 'application/json',
+               },
+           })
+               .then(response => {return response.json()})
+                   .then(data => {
+                       //let parseData = JSON.parse(data)
+                         this.setState({
+                           nextUri: data
+                         })
+                       }).catch(error => {
+                         console.log(error);
+                   });
+       }
+   
+       handlePrevApi(uri) {
+           fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
+               headers: {
+                   'Accept': 'application/json',
+               },
+           })
+               .then(response => {return response.json()})
+                   .then(data => {
+                       //let parseData = JSON.parse(data)
+                         this.setState({
+                           prevUri: data
+                         })
+                       }).catch(error => {
+                         console.log(error);
+                   });
+       }
 
-    }
     selectFilter() {
         for(let i = 0; i < this.state.filter.length; i++) {
             if(this.state.filter[i].type === this.state.params.toLowerCase()) {
@@ -248,7 +282,10 @@ class FishingProductSearch extends React.Component {
     handleNext(e) {
         let newUri = this.state.nextUri
         console.log(newUri)
-        fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${newUri}`, {
+        this.setState({
+            results: newUri.Items
+        })
+        fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${newUri['@firstpageuri']}`, {
             headers: {
                 'Accept': 'application/json',
             },
@@ -257,10 +294,7 @@ class FishingProductSearch extends React.Component {
                 .then(data => {
                     //let parseData = JSON.parse(data)
                       this.setState({
-                        results: data.Items,
-                        oldResults: data.Items,
-                        nextUri: data['@nextpageuri'],
-                        prevUri: data['@firstpageuri'],
+                        nextUri: data,
                       })
                     }).catch(error => {
                       console.log(error);
@@ -270,7 +304,10 @@ class FishingProductSearch extends React.Component {
     handlePrev(e) {
         let newUri = this.state.prevUri
         console.log(newUri)
-        fetch(`https://outdoorgearpicker-server.herokuapp.com/prevpage?uri=${newUri}`, {
+        this.setState({
+            results: newUri.Items
+        })
+        fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${newUri['@firstpageuri']}`, {
             headers: {
                 'Accept': 'application/json',
             },
@@ -279,10 +316,7 @@ class FishingProductSearch extends React.Component {
                 .then(data => {
                     //let parseData = JSON.parse(data)
                       this.setState({
-                        results: data.Items,
-                        oldResults: data.Items,
-                        nextUri: data['@nextpageuri'],
-                        prevUri: data['@firstpageuri'],
+                        prevUri: data,
                       })
                     }).catch(error => {
                       console.log(error);
