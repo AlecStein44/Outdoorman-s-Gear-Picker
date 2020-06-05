@@ -1,9 +1,10 @@
 import React from 'react'
 
-class ProductSearch extends React.Component {
+class HikingEditProductSearch extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            listName: sessionStorage.getItem('active'),
             results: [],
             oldResults: [],
             resultsloaded: false,
@@ -39,65 +40,65 @@ class ProductSearch extends React.Component {
     }
 
     componentDidMount() {
-     fetch(`https://outdoorgearpicker-server.herokuapp.com/${this.state.params}`, {
-        headers: {
-            'Accept': 'application/json',
-        },
-      })
-      .then(response => {return response.json()})
-      .then(data => {
-          JSON.stringify(data)
-          console.log(JSON.stringify(data.Items))
-          //let parseData = JSON.parse(data)
-            this.setState({
-                results: data.Items,
-                oldResults: data.Items,
-                resultsloaded: true
-            })
-            this.handleNextApi(data['@nextpageuri'])
-            this.handlePrevApi(data['@firstpageuri'])
-            this.selectFilter()
-          }).catch(error => {
-            console.log(error);
-          });
+        fetch(`https://outdoorgearpicker-server.herokuapp.com/${this.state.params}`, {
+           headers: {
+               'Accept': 'application/json',
+           },
+         })
+         .then(response => {return response.json()})
+         .then(data => {
+             JSON.stringify(data)
+             console.log(JSON.stringify(data.Items))
+             //let parseData = JSON.parse(data)
+               this.setState({
+                   results: data.Items,
+                   oldResults: data.Items,
+                   resultsloaded: true
+               })
+               this.handleNextApi(data['@nextpageuri'])
+               this.handlePrevApi(data['@firstpageuri'])
+               this.selectFilter()
+             }).catch(error => {
+               console.log(error);
+             });
+   
+       }
+   
+       handleNextApi(uri) {
+           fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
+               headers: {
+                   'Accept': 'application/json',
+               },
+           })
+               .then(response => {return response.json()})
+                   .then(data => {
+                       //let parseData = JSON.parse(data)
+                         this.setState({
+                           nextUri: data
+                         })
+                       }).catch(error => {
+                         console.log(error);
+                   });
+       }
+   
+       handlePrevApi(uri) {
+           fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
+               headers: {
+                   'Accept': 'application/json',
+               },
+           })
+               .then(response => {return response.json()})
+                   .then(data => {
+                       //let parseData = JSON.parse(data)
+                         this.setState({
+                           prevUri: data
+                         })
+                       }).catch(error => {
+                         console.log(error);
+                   });
+       }
 
-    }
-
-    handleNextApi(uri) {
-        fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
-            headers: {
-                'Accept': 'application/json',
-            },
-        })
-            .then(response => {return response.json()})
-                .then(data => {
-                    //let parseData = JSON.parse(data)
-                      this.setState({
-                        nextUri: data
-                      })
-                    }).catch(error => {
-                      console.log(error);
-                });
-    }
-
-    handlePrevApi(uri) {
-        fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
-            headers: {
-                'Accept': 'application/json',
-            },
-        })
-            .then(response => {return response.json()})
-                .then(data => {
-                    //let parseData = JSON.parse(data)
-                      this.setState({
-                        prevUri: data
-                      })
-                    }).catch(error => {
-                      console.log(error);
-                });
-    }
-
-
+       
     selectFilter() {
         for(let i = 0; i < this.state.filter.length; i++) {
             if(this.state.filter[i].type === this.state.params.toLowerCase()) {
@@ -128,7 +129,7 @@ class ProductSearch extends React.Component {
     }
 
     handleClick(e) {
-        if(sessionStorage.getItem(this.state.params.toLowerCase()) === null){
+        /*if(sessionStorage.getItem(this.state.params.toLowerCase()) === null){
             let selected = {
                 name: this.state.results[e.target.id].Name,
                 price: Number(this.state.results[e.target.id].CurrentPrice),
@@ -143,7 +144,7 @@ class ProductSearch extends React.Component {
 
             sessionStorage.setItem(newParams, JSON.stringify(selected))
 
-            window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist')
+            window.location.assign('https://outdoorgearpicker.now.sh/huntinglist')
         } else {
             let multiselected = {
                 type: this.state.params.toLowerCase(),
@@ -170,9 +171,32 @@ class ProductSearch extends React.Component {
                 sessionStorage.setItem('multi', JSON.stringify(multiObj))
             }
 
-            window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist')
+            window.location.assign('https://outdoorgearpicker.now.sh/huntinglist')
+
+        }*/
+        let newParams = this.state.params.toLowerCase()
+        let activeSess = JSON.parse(localStorage.getItem(this.state.listName))
+        let selected = {
+            type: this.state.params.toLocaleLowerCase(),
+            name: this.state.results[e.target.id].Name,
+            price: Number(this.state.results[e.target.id].CurrentPrice),
+            image: this.state.results[e.target.id].ImageUrl,
+            link: this.state.results[e.target.id].Url
 
         }
+        if(activeSess.guns.name.length === 0) {
+            
+            activeSess[newParams] = selected
+
+            localStorage.setItem(this.state.listName, JSON.stringify(activeSess))
+        } else {
+            activeSess.multiArr.guns.push(selected)
+            activeSess.multiArr.multiPrice = activeSess.multiArr.multiPrice + selected.price
+
+            localStorage.setItem(this.state.listName, JSON.stringify(activeSess))
+        }
+
+        window.location.assign('https://outdoorgearpicker.now.sh/hikinglist')
     }
 
     handleActive(event) {
@@ -325,7 +349,6 @@ class ProductSearch extends React.Component {
     }
 
     render() {
-        console.log(this.state.resultsloaded)
         return(
             <main>
                 <div className='div-filter'>
@@ -366,6 +389,7 @@ class ProductSearch extends React.Component {
                         <button className="filter-reset" onClick={this.filterReset.bind(this)}>Reset</button>
                     </div>
                 </form> : null}
+                {this.state.resultsloaded === false ? <p>Please wait while your products are loading. This might take some time.</p> : null}
                 <table className="list-table">
                     <tr className="list-tr">
                         <th className="list-th">{this.state.params.charAt(0).toUpperCase() + 
@@ -374,7 +398,6 @@ class ProductSearch extends React.Component {
                         <th className="list-th">Manufacturer</th>
                         <th className="list-th">Gear Price</th>
                     </tr>
-                    {this.state.resultsloaded === false ? <p>Please wait while your products are loading. This might take some time.</p> : null}
                 {this.state.results.map((data, j)  => {
                     return ( <tr className="list-tr">            
                                 <td className="list-td"><button className="list-button" type="button" onClick={this.handleClick} value={data.Name} id={j}>Add {data.Name}</button></td>
@@ -384,7 +407,7 @@ class ProductSearch extends React.Component {
                              </tr> )
                 })}
                 </table>
-            <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist') }}>Back</button>
+            <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/hikinglist') }}>Back</button>
             <a onClick={this.handlePrev.bind(this) } value={this.state.prevUri} className="prevnext">Previous</a>
             <a onClick={this.handleNext.bind(this) } value={this.state.nextUri} className="prevnext">Next</a>
             </main>
@@ -392,6 +415,4 @@ class ProductSearch extends React.Component {
     }
 }
 
-export default ProductSearch
-
-//{this.state.results.map(data => {return <button type="button" onClick={this.handleClick} value={data.name} id={data.price}>Add {data.name}</button>})}
+export default HikingEditProductSearch

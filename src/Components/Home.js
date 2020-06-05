@@ -12,6 +12,7 @@ class Home extends React.Component {
             results: Object.keys(localStorage),
             hunting: [],
             camping: [],
+            hiking: [],
             fishing: []
         }
     }
@@ -32,14 +33,18 @@ class Home extends React.Component {
         sessionStorage.clear()
 
         let huntingArray = []
-        let campingArray = []
+        let CampingArray = []
+        let hikingArray = []
         let fishingArray = []
         for (let i = 0; i < this.state.results.length; i++) {
             if(this.state.results[i].includes('Hunting')){
                 huntingArray.push(this.state.results[i])
             }
+            if(this.state.results[i].includes('Camping')){
+                CampingArray.push(this.state.results[i])
+            }
             if(this.state.results[i].includes('Hiking')){
-                campingArray.push(this.state.results[i])
+                hikingArray.push(this.state.results[i])
             }
             if(this.state.results[i].includes('Fishing')){
                 fishingArray.push(this.state.results[i])
@@ -47,7 +52,8 @@ class Home extends React.Component {
         }
         this.setState({
             hunting: huntingArray,
-            camping: campingArray,
+            camping: CampingArray,
+            hiking: hikingArray,
             fishing: fishingArray
         })
     }
@@ -62,6 +68,12 @@ class Home extends React.Component {
         sessionStorage.setItem('active', data)
 
         window.location.assign(`https://outdoorgearpicker.now.sh/campinglist`)
+    }
+
+    hikingClick(data) {
+        sessionStorage.setItem('active', data)
+
+        window.location.assign(`https://outdoorgearpicker.now.sh/hikinglist`)
     }
 
     fishingClick(data) {
@@ -82,6 +94,18 @@ class Home extends React.Component {
         })
     }
 
+    handleCampingDelete(e) {
+        let reParse = this.state.camping
+
+        localStorage.removeItem(reParse[e.target.value])
+
+        delete reParse[e.target.value]
+
+        this.setState({
+            camping: reParse
+        })
+    }
+
     handleFishDelete(e) {
         let reFishParse = this.state.fishing
 
@@ -94,15 +118,15 @@ class Home extends React.Component {
         })
     }
 
-    handleCampingDelete(e) {
-        let reCampParse = this.state.camping
+    handlehikingDelete(e) {
+        let reCampParse = this.state.hiking
 
         localStorage.removeItem(reCampParse[e.target.value])
 
         delete reCampParse[e.target.value]
 
         this.setState({
-            camping: reCampParse
+            hiking: reCampParse
         })
     }
 
@@ -124,11 +148,22 @@ class Home extends React.Component {
                     </div>
 
                     <div className="home-list">
-                        <h2 className="home-h2" id="home-camping">Hiking List</h2>
+                        <h2 className="home-h2" id="home-camping">Camping List</h2>
                         <div class='home-oldnew-list'>
-                        <p className="home-new-p">Click <a href='https://outdoorgearpicker.now.sh/newcampinglist'>here</a> or the plus sign to make a new list.</p>
-                            {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data.replace("Hiking", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleCampingDelete.bind(this)}>X</button></section>})}
-                            <a href='https://outdoorgearpicker.now.sh/newcampinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
+                            <p className="home-new-p">Click <a href='https://outdoorgearpicker.now.sh/newcampinglist'>here</a> or the plus sign to make a new list.</p>
+                            {this.state.camping.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.campingClick(data)} >{data.replace("Camping", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handleDelete.bind(this)}>X</button></section>})}
+                            <a href='https://outdoorgearpicker.now.sh/newcampinglist'><span className="home-plus" >&#43;</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="home-list-wrapper">
+                    <div className="home-list">
+                        <h2 className="home-h2" id="home-hiking">Hiking List</h2>
+                        <div class='home-oldnew-list'>
+                        <p className="home-new-p">Click <a href='https://outdoorgearpicker.now.sh/newhikinglist'>here</a> or the plus sign to make a new list.</p>
+                            {this.state.hiking.map((data, index) => {return <section className="home-listsec"><h3 value={data} onClick={() => this.hikingClick(data)} >{data.replace("Hiking", "")}</h3> <button className="home-list-delete" value={index} onClick={this.handlehikingDelete.bind(this)}>X</button></section>})}
+                            <a href='https://outdoorgearpicker.now.sh/newhikinglist' className="home-plus"><span className="home-plus" >&#43;</span></a>
                         </div>
                     </div>
 
@@ -141,6 +176,7 @@ class Home extends React.Component {
                         </div>
                     </div>    
                 </div>
+                
                 <div className="home-random-div">
                     {/*this.state.fetchData.map(data => {
                         return(

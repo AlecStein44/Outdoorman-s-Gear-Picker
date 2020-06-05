@@ -1,6 +1,6 @@
 import React from 'react'
 
-class ProductSearch extends React.Component {
+class HikingProductSearch extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -39,63 +39,63 @@ class ProductSearch extends React.Component {
     }
 
     componentDidMount() {
-     fetch(`https://outdoorgearpicker-server.herokuapp.com/${this.state.params}`, {
-        headers: {
-            'Accept': 'application/json',
-        },
-      })
-      .then(response => {return response.json()})
-      .then(data => {
-          JSON.stringify(data)
-          console.log(JSON.stringify(data.Items))
-          //let parseData = JSON.parse(data)
-            this.setState({
-                results: data.Items,
-                oldResults: data.Items,
-                resultsloaded: true
-            })
-            this.handleNextApi(data['@nextpageuri'])
-            this.handlePrevApi(data['@firstpageuri'])
-            this.selectFilter()
-          }).catch(error => {
-            console.log(error);
-          });
-
-    }
-
-    handleNextApi(uri) {
-        fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
-            headers: {
-                'Accept': 'application/json',
-            },
-        })
-            .then(response => {return response.json()})
-                .then(data => {
-                    //let parseData = JSON.parse(data)
-                      this.setState({
-                        nextUri: data
-                      })
-                    }).catch(error => {
-                      console.log(error);
-                });
-    }
-
-    handlePrevApi(uri) {
-        fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
-            headers: {
-                'Accept': 'application/json',
-            },
-        })
-            .then(response => {return response.json()})
-                .then(data => {
-                    //let parseData = JSON.parse(data)
-                      this.setState({
-                        prevUri: data
-                      })
-                    }).catch(error => {
-                      console.log(error);
-                });
-    }
+        fetch(`https://outdoorgearpicker-server.herokuapp.com/${this.state.params}`, {
+           headers: {
+               'Accept': 'application/json',
+           },
+         })
+         .then(response => {return response.json()})
+         .then(data => {
+             JSON.stringify(data)
+             console.log(JSON.stringify(data.Items))
+             //let parseData = JSON.parse(data)
+               this.setState({
+                   results: data.Items,
+                   oldResults: data.Items,
+                   resultsloaded: true
+               })
+               this.handleNextApi(data['@nextpageuri'])
+               this.handlePrevApi(data['@firstpageuri'])
+               this.selectFilter()
+             }).catch(error => {
+               console.log(error);
+             });
+   
+       }
+   
+       handleNextApi(uri) {
+           fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
+               headers: {
+                   'Accept': 'application/json',
+               },
+           })
+               .then(response => {return response.json()})
+                   .then(data => {
+                       //let parseData = JSON.parse(data)
+                         this.setState({
+                           nextUri: data
+                         })
+                       }).catch(error => {
+                         console.log(error);
+                   });
+       }
+   
+       handlePrevApi(uri) {
+           fetch(`https://outdoorgearpicker-server.herokuapp.com/nextpage?uri=${uri}`, {
+               headers: {
+                   'Accept': 'application/json',
+               },
+           })
+               .then(response => {return response.json()})
+                   .then(data => {
+                       //let parseData = JSON.parse(data)
+                         this.setState({
+                           prevUri: data
+                         })
+                       }).catch(error => {
+                         console.log(error);
+                   });
+       }
 
 
     selectFilter() {
@@ -143,7 +143,7 @@ class ProductSearch extends React.Component {
 
             sessionStorage.setItem(newParams, JSON.stringify(selected))
 
-            window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist')
+            window.location.assign('https://outdoorgearpicker.now.sh/newhikinglist')
         } else {
             let multiselected = {
                 type: this.state.params.toLowerCase(),
@@ -170,7 +170,7 @@ class ProductSearch extends React.Component {
                 sessionStorage.setItem('multi', JSON.stringify(multiObj))
             }
 
-            window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist')
+            window.location.assign('https://outdoorgearpicker.now.sh/newhikinglist')
 
         }
     }
@@ -325,7 +325,6 @@ class ProductSearch extends React.Component {
     }
 
     render() {
-        console.log(this.state.resultsloaded)
         return(
             <main>
                 <div className='div-filter'>
@@ -366,6 +365,7 @@ class ProductSearch extends React.Component {
                         <button className="filter-reset" onClick={this.filterReset.bind(this)}>Reset</button>
                     </div>
                 </form> : null}
+                {this.state.resultsloaded === false ? <p>Please wait while your products are loading. This might take some time.</p> : null}
                 <table className="list-table">
                     <tr className="list-tr">
                         <th className="list-th">{this.state.params.charAt(0).toUpperCase() + 
@@ -374,7 +374,6 @@ class ProductSearch extends React.Component {
                         <th className="list-th">Manufacturer</th>
                         <th className="list-th">Gear Price</th>
                     </tr>
-                    {this.state.resultsloaded === false ? <p>Please wait while your products are loading. This might take some time.</p> : null}
                 {this.state.results.map((data, j)  => {
                     return ( <tr className="list-tr">            
                                 <td className="list-td"><button className="list-button" type="button" onClick={this.handleClick} value={data.Name} id={j}>Add {data.Name}</button></td>
@@ -384,7 +383,7 @@ class ProductSearch extends React.Component {
                              </tr> )
                 })}
                 </table>
-            <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/newhuntinglist') }}>Back</button>
+            <button className="list-back" onClick={() => { window.location.assign('https://outdoorgearpicker.now.sh/newhikinglist') }}>Back</button>
             <a onClick={this.handlePrev.bind(this) } value={this.state.prevUri} className="prevnext">Previous</a>
             <a onClick={this.handleNext.bind(this) } value={this.state.nextUri} className="prevnext">Next</a>
             </main>
@@ -392,6 +391,6 @@ class ProductSearch extends React.Component {
     }
 }
 
-export default ProductSearch
+export default HikingProductSearch
 
 //{this.state.results.map(data => {return <button type="button" onClick={this.handleClick} value={data.name} id={data.price}>Add {data.name}</button>})}

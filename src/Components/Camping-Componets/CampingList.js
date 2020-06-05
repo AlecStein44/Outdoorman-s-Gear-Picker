@@ -8,45 +8,46 @@ class CampingList extends React.Component {
             results: [],
             hasChanged: false,
             hasSaved: false,
-            headlamp: {name: '', price: 0, image: '', link: ''},
-            compass: {name: '', price: 0, image: '', link: ''},
-            trekkingpoles: {name: '', price: 0, image: '', link: ''},
-            sling: {name: '', price: 0, image: '', link: ''},
-            bipod: {name: '', price: 0, image: '', link: ''},
-            essentialsmisc: {name: '', price: 0, image: '', link: ''},
-            archery: {name: '', price: 0, image: '', link: ''},
-            arrow: {name: '', price: 0, image: '', link: ''},
-            arrhead: {name: '', price: 0, image: '', link: ''},
-            archtrekkingpoles: {name: '', price: 0, image: '', link: ''},
-            archsling: {name: '', price: 0, image: '', link: ''},
-            archbipod: {name: '', price: 0, image: '', link: ''},
-            miscarchery: {name: '', price: 0, image: '', link: ''},
-            hikinghat: {name: '', price: 0, image: '', link: ''},
-            covermask: {name: '', price: 0, image: '', link: ''},
-            windbreaker: {name: '', price: 0, image: '', link: ''},
-            hikingshirt: {name: '', price: 0, image: '', link: ''},
-            hikingpants: {name: '', price: 0, image: '', link: ''},
+            tent: {name: '', price: 0, image: '', link: ''},
+            airmattress: {name: '', price: 0, image: '', link: ''},
+            airpump: {name: '', price: 0, image: '', link: ''},
+            cooler: {name: '', price: 0, image: '', link: ''},
+            sleepingcot: {name: '', price: 0, image: '', link: ''},
+            thermos: {name: '', price: 0, image: '', link: ''},
+            cookingmisc: {name: '', price: 0, image: '', link: ''},
+            stove: {name: '', price: 0, image: '', link: ''},
+            lighter: {name: '', price: 0, image: '', link: ''},
+            charcoal: {name: '', price: 0, image: '', link: ''},
+            archcooler: {name: '', price: 0, image: '', link: ''},
+            archsleepingcot: {name: '', price: 0, image: '', link: ''},
+            archthermos: {name: '', price: 0, image: '', link: ''},
+            miscstove: {name: '', price: 0, image: '', link: ''},
+            tent: {name: '', price: 0, image: '', link: ''},
+            propane: {name: '', price: 0, image: '', link: ''},
+            tarp: {name: '', price: 0, image: '', link: ''},
+            stakes: {name: '', price: 0, image: '', link: ''},
+            shadetarp: {name: '', price: 0, image: '', link: ''},
             gaiter: {name: '', price: 0, image: '', link: ''},
-            hikingpants: {name: '', price: 0, image: '', link: ''},
-            hikingboot: {name: '', price: 0, image: '', link: ''},
-            hikingbackpack: {name: '', price: 0, image: '', link: ''},
+            axe: {name: '', price: 0, image: '', link: ''},
+            hammer: {name: '', price: 0, image: '', link: ''},
+            sleepingbag: {name: '', price: 0, image: '', link: ''},
             binocularholder: {name: '', price: 0, image: '', link: ''},
-            bladder: {name: '', price: 0, image: '', link: ''},
+            pillow: {name: '', price: 0, image: '', link: ''},
             binos: {name: '', price: 0, image: '', link: ''},
             spotting: {name: '', price: 0, image: '', link: ''},
             rangefinder: {name: '', price: 0, image: '', link: ''},
             processing: {name: '', price: 0, image: '', link: ''},
-            knive: {name: '', price: 0, image: '', link: ''},
+            watercontainer: {name: '', price: 0, image: '', link: ''},
             replacementblades: {name: '', price: 0, image: '', link: ''},
             saw: {name: '', price: 0, image: '', link: ''},
             sheer: {name: '', price: 0, image: '', link: ''},
             gamebag: {name: '', price: 0, image: '', link: ''},
             gloves: {name: '', price: 0, image: '', link: ''},
-            rope: {name: '', price: 0, image: '', link: ''},
+            lantern: {name: '', price: 0, image: '', link: ''},
             medical: {name: '', price: 0, image: '', link: ''},
             waterpurifier: {name: '', price: 0, image: '', link: ''},
             gps: {name: '', price: 0, image: '', link: ''},
-            firestarter: {name: '', price: 0, image: '', link: ''},
+            satalite: {name: '', price: 0, image: '', link: ''},
             misc: {name: '', price: 0, image: '', link: ''},
             multiArr: {guns: null},
             finalPrice: 0
@@ -60,45 +61,46 @@ class CampingList extends React.Component {
         console.log(getParseData)
         this.setState({
             results: getParseData,
-            headlamp: getParseData.headlamp,
-            compass: getParseData.compass,
-            trekkingpoles: getParseData.trekkingpoles,
-            sling: getParseData.sling,
-            bipod: getParseData.bipod,
-            essentialsmisc: getParseData.essentialsmisc,
-            archery: getParseData.archery,
-            arrow: getParseData.arrow,
-            arrhead: getParseData.arrhead,
-            archtrekkingpoles: getParseData.archtrekkingpoles,
-            archsling: getParseData.archsling,
-            archbipod: getParseData.archbipod,
-            miscarchery: getParseData.miscarchery,
-            hikinghat: getParseData.hikinghat,
-            covermask: getParseData.covermask,
-            windbreaker: getParseData.windbreaker,
-            hikingshirt: getParseData.hikingshirt,
-            hikingpants: getParseData.hikingpants,
+            tent: getParseData.tent,
+            airmattress: getParseData.airmattress,
+            airpump: getParseData.airpump,
+            cooler: getParseData.cooler,
+            sleepingcot: getParseData.sleepingcot,
+            thermos: getParseData.thermos,
+            cookingmisc: getParseData.cookingmisc,
+            stove: getParseData.stove,
+            lighter: getParseData.lighter,
+            charcoal: getParseData.charcoal,
+            archcooler: getParseData.archcooler,
+            archsleepingcot: getParseData.archsleepingcot,
+            archthermos: getParseData.archthermos,
+            miscstove: getParseData.miscstove,
+            tent: getParseData.tent,
+            propane: getParseData.propane,
+            tarp: getParseData.tarp,
+            stakes: getParseData.stakes,
+            shadetarp: getParseData.shadetarp,
             gaiter: getParseData.gaiter,
-            hikingpants: getParseData.hikingpants,
-            hikingboot: getParseData.hikingboot,
-            hikingbackpack: getParseData.hikingbackpack,
+            axe: getParseData.axe,
+            hammer: getParseData.hammer,
+            sleepingbag: getParseData.sleepingbag,
             binocularholder: getParseData.binocularholder,
-            bladder: getParseData.bladder,
+            pillow: getParseData.pillow,
             binos: getParseData.binos,
             spotting: getParseData.spotting,
             rangefinder: getParseData.rangefinder,
             processing: getParseData.processing,
-            knive: getParseData.knive,
+            watercontainer: getParseData.watercontainer,
             replacementblades: getParseData.replacementblades,
             saw: getParseData.saw,
             sheer: getParseData.sheer,
             gamebag: getParseData.gamebag,
             gloves: getParseData.gloves,
-            rope: getParseData.rope,
+            lantern: getParseData.lantern,
             medical: getParseData.medical,
             waterpurifier: getParseData.waterpurifier,
             gps: getParseData.gps,
-            firestarter: getParseData.firestarter,
+            satalite: getParseData.satalite,
             misc: getParseData.misc,
             multiArr: getParseData.multiArr,
             finalPrice: Number(getParseData.finalPrice)
@@ -139,8 +141,8 @@ class CampingList extends React.Component {
         })*/
         if(isNaN(e.target.value) === false) {
             let deleteObj = this.state.multiArr
-            let minusPrice = deleteObj.guns[e.target.value].price
-            deleteObj.guns.splice(e.target.value , 1);
+            let minusPrice = deleteObj.airmattress[e.target.value].price
+            deleteObj.airmattress.splice(e.target.value , 1);
             deleteObj.multiPrice = deleteObj.multiPrice - minusPrice
             let donePrice = Number(this.state.finalPrice) - Number(minusPrice)
             console.log(deleteObj)
@@ -170,7 +172,7 @@ class CampingList extends React.Component {
     handleSave() {
         let saveStringify = JSON.stringify(this.state.results)
 
-        localStorage.setItem(`Hunting ${this.state.results.listName}`, saveStringify)
+        localStorage.setItem(`Camping ${this.state.results.listName}`, saveStringify)
 
         this.setState({
             hasChanged: false,
@@ -185,10 +187,10 @@ class CampingList extends React.Component {
     }
 
     render() {
-        console.log(this.state.tent)
+        //console.log(this.state.tent)
         return(
             <main className="main-class">
-                <h2 className="list-h2-topname">Hiking New List</h2>
+                <h2 className="list-h2-topname">Camping New List</h2>
                 {this.state.hasChanged === true ? <button className="list-save" onClick={this.handleSave.bind(this)}>Save Delete</button> : null}
                 {this.state.hasSaved === true ? <p className="list-hassaved">Everything has Saved!</p> : null}
                 <table className="list-table">
@@ -200,270 +202,391 @@ class CampingList extends React.Component {
                     </tr>
 
 
-                    <tr className="tr-list-break"><td className="td-list-break">Clothing</td></tr>
+                    <tr className="tr-list-break"><td className="td-list-break">Shelter</td></tr>
                     <tr className="list-tr">
-                         <td className="list-td">Hiking Hat</td>
-                         {this.state.hikinghat.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.hikinghat.image} /></td> : <td className="no-td"></td>}
-                         {this.state.hikinghat.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikinghat'>Add Hiking Hat</a></td> : <td className="list-td">{this.state.hikinghat.name}</td>}
-                         {this.state.hikinghat.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hikinghat.price}</td>}
-                         {this.state.hikinghat.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hikinghat.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.hikinghat.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="hikinghat" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Tent</td>
+                         {this.state.tent.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.tent.image} /></td> : <td className="no-td"></td>}
+                         {this.state.tent.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=tent'>Add Tent</a></td> : <td className="list-td">{this.state.tent.name}</td>}
+                         {this.state.tent.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.tent.price}</td>}
+                         {this.state.tent.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.tent.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.tent.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="tent" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'hikinghat' ? <MultiSelect index={index} tdName='hikinghat' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'tent' ? <MultiSelect index={index} tdName='tent' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.hikinghat.name.length !== 0 ? 
+                    {this.state.tent.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Hiking Hat</td>
+                          <td className="list-td" >Add Extra Tent</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikinghat'>Add Extra Hiking Hat</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=tent'>Add Extra Tent</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Windbreaker</td>
-                         {this.state.windbreaker.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.windbreaker.image} /></td> : <td className="no-td"></td>}
-                         {this.state.windbreaker.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=windbreaker'>Add Windbreakers</a></td> : <td className="list-td">{this.state.windbreaker.name}</td>}
-                         {this.state.windbreaker.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.windbreaker.price}</td>}
-                         {this.state.windbreaker.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.windbreaker.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.windbreaker.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="windbreaker" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Tarp</td>
+                         {this.state.tarp.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.tarp.image} /></td> : <td className="no-td"></td>}
+                         {this.state.tarp.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=tarp'>Add Tarp</a></td> : <td className="list-td">{this.state.tarp.name}</td>}
+                         {this.state.tarp.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.tarp.price}</td>}
+                         {this.state.tarp.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.tarp.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.tarp.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="tarp" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'windbreaker' ? <MultiSelect index={index} tdName='Windbreaker' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'tarp' ? <MultiSelect index={index} tdName='tarp' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.windbreaker.name.length !== 0 ? 
+                    {this.state.tarp.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Windbreaker</td>
+                          <td className="list-td" >Add Extra Tarp</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=windbreaker'>Add Extra Windbreaker</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=tarp'>Add Extra tarp</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">hikingshirt</td>
-                         {this.state.hikingshirt.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.hikingshirt.image} /></td> : <td className="no-td"></td>}
-                         {this.state.hikingshirt.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingshirt'>Add hikingshirt</a></td> : <td className="list-td">{this.state.hikingshirt.name}</td>}
-                         {this.state.hikingshirt.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hikingshirt.price}</td>}
-                         {this.state.hikingshirt.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hikingshirt.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.hikingshirt.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="hikingshirt" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Stakes</td>
+                         {this.state.stakes.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.stakes.image} /></td> : <td className="no-td"></td>}
+                         {this.state.stakes.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=stakes'>Add Stakes</a></td> : <td className="list-td">{this.state.stakes.name}</td>}
+                         {this.state.stakes.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.stakes.price}</td>}
+                         {this.state.stakes.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.stakes.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.stakes.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="stakes" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'hikingshirt' ? <MultiSelect index={index} tdName='hikingshirt' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'stakes' ? <MultiSelect index={index} tdName='stakes' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.hikingshirt.name.length !== 0 ? 
+                    {this.state.stakes.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra hikingshirt</td>
+                          <td className="list-td" >Add Extra Stakes</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingshirt'>Add Extra hikingshirt</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=stakes'>Add Extra Stakes</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">hikingpants</td>
-                         {this.state.hikingpants.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.hikingpants.image} /></td> : <td className="no-td"></td>}
-                         {this.state.hikingpants.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingpants'>Add hikingpants</a></td> : <td className="list-td">{this.state.hikingpants.name}</td>}
-                         {this.state.hikingpants.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hikingpants.price}</td>}
-                         {this.state.hikingpants.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hikingpants.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.hikingpants.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="hikingpants" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Shade Tarp</td>
+                         {this.state.shadetarp.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.shadetarp.image} /></td> : <td className="no-td"></td>}
+                         {this.state.shadetarp.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=shadetarp'>Add Shade Tarp</a></td> : <td className="list-td">{this.state.shadetarp.name}</td>}
+                         {this.state.shadetarp.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.shadetarp.price}</td>}
+                         {this.state.shadetarp.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.shadetarp.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.shadetarp.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="shadetarp" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'hikingpants' ? <MultiSelect index={index} tdName='hikingpants' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'shadetarp' ? <MultiSelect index={index} tdName='shadetarp' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.hikingpants.name.length !== 0 ? 
+                    {this.state.shadetarp.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra hikingpants</td>
+                          <td className="list-td" >Add Extra Shade Tarp</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingpants'>Add Extra hikingpants</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=shadetarp'>Add Extra Shade Tarp</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Pants</td>
-                         {this.state.hikingpants.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.hikingpants.image} /></td> : <td className="no-td"></td>}
-                         {this.state.hikingpants.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingpants'>Add Pants</a></td> : <td className="list-td">{this.state.hikingpants.name}</td>}
-                         {this.state.hikingpants.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hikingpants.price}</td>}
-                         {this.state.hikingpants.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hikingpants.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.hikingpants.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="hikingpants" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Axe</td>
+                         {this.state.axe.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.axe.image} /></td> : <td className="no-td"></td>}
+                         {this.state.axe.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=axe'>Add Axe</a></td> : <td className="list-td">{this.state.axe.name}</td>}
+                         {this.state.axe.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.axe.price}</td>}
+                         {this.state.axe.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.axe.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.axe.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="axe" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'hikingpants' ? <MultiSelect index={index} tdName='Pants' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'axe' ? <MultiSelect index={index} tdName='Axe' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.hikingpants.name.length !== 0 ? 
+                    {this.state.axe.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Pants</td>
+                          <td className="list-td" >Add Extra Axe</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingpants'>Add Extra Pants</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=axe'>Add Extra Axe</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Hiking Boots</td>
-                         {this.state.hikingboot.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.hikingboot.image} /></td> : <td className="no-td"></td>}
-                         {this.state.hikingboot.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingboot'>Add Hiking Boots</a></td> : <td className="list-td">{this.state.hikingboot.name}</td>}
-                         {this.state.hikingboot.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hikingboot.price}</td>}
-                         {this.state.hikingboot.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hikingboot.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.hikingboot.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="hikingboot" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Hammer</td>
+                         {this.state.hammer.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.hammer.image} /></td> : <td className="no-td"></td>}
+                         {this.state.hammer.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=hammer'>Add Hammer</a></td> : <td className="list-td">{this.state.hammer.name}</td>}
+                         {this.state.hammer.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hammer.price}</td>}
+                         {this.state.hammer.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hammer.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.hammer.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="hammer" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'hikingboot' ? <MultiSelect index={index} tdName='Hiking Boots' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'hammer' ? <MultiSelect index={index} tdName='Hammer' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.hikingboot.name.length !== 0 ? 
+                    {this.state.hammer.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Hiking Boots</td>
+                          <td className="list-td" >Add Extra Hammer</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingboot'>Add Extra Hiking Boots</a></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                    </tr> : null}
-
-
-                    <tr className="tr-list-break"><td className="td-list-break">Packs/Containers</td></tr>
-                    <tr className="list-tr">
-                         <td className="list-td">Backpack </td>
-                         {this.state.hikingbackpack.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.hikingbackpack.image} /></td> : <td className="no-td"></td>}
-                         {this.state.hikingbackpack.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingbackpack'>Add Backpack</a></td> : <td className="list-td">{this.state.hikingbackpack.name}</td>}
-                         {this.state.hikingbackpack.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hikingbackpack.price}</td>}
-                         {this.state.hikingbackpack.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hikingbackpack.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.hikingbackpack.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="hikingbackpack" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
-                    </tr>
-                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'hikingbackpack' ? <MultiSelect index={index} tdName='Backpack' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
-                    }) : null}
-                    {this.state.hikingbackpack.name.length !== 0 ? 
-                          <tr className="list-tr">
-                          <td className="list-td" >Add Extra Backpack</td>
-                          <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hikingbackpack'>Add Extra Backpack</a></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                    </tr> : null}
-                    <tr className="list-tr">
-                         <td className="list-td">Water Bladder/Container </td>
-                         {this.state.bladder.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.bladder.image} /></td> : <td className="no-td"></td>}
-                         {this.state.bladder.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=bladder'>Add Water Bladder/Container</a></td> : <td className="list-td">{this.state.bladder.name}</td>}
-                         {this.state.bladder.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.bladder.price}</td>}
-                         {this.state.bladder.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.bladder.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.bladder.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="bladder" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
-                    </tr>
-                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'bladder' ? <MultiSelect index={index} tdName='Water Bladder/Container' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
-                    }) : null}
-                    {this.state.bladder.name.length !== 0 ? 
-                          <tr className="list-tr">
-                          <td className="list-td" >Add Extra Water Bladder/Container</td>
-                          <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=bladder'>Add Extra Water Bladder/Container</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=hammer'>Add Extra Hammer</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
 
 
+                    <tr className="tr-list-break"><td className="td-list-break">Bedding</td></tr>
+                    <tr className="list-tr">
+                         <td className="list-td">Sleeping Bag </td>
+                         {this.state.sleepingbag.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.sleepingbag.image} /></td> : <td className="no-td"></td>}
+                         {this.state.sleepingbag.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=sleepingbag'>Add Sleeping Bag</a></td> : <td className="list-td">{this.state.sleepingbag.name}</td>}
+                         {this.state.sleepingbag.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.sleepingbag.price}</td>}
+                         {this.state.sleepingbag.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.sleepingbag.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.sleepingbag.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="sleepingbag" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'sleepingbag' ? <MultiSelect index={index} tdName='Sleeping Bag' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.sleepingbag.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Extra Sleeping Bag</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=sleepingbag'>Add Extra Sleeping Bag</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
+                    <tr className="list-tr">
+                         <td className="list-td">Pillow </td>
+                         {this.state.pillow.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.pillow.image} /></td> : <td className="no-td"></td>}
+                         {this.state.pillow.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=pillow'>Add Pillow</a></td> : <td className="list-td">{this.state.pillow.name}</td>}
+                         {this.state.pillow.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.pillow.price}</td>}
+                         {this.state.pillow.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.pillow.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.pillow.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="pillow" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'pillow' ? <MultiSelect index={index} tdName='Pillow' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.pillow.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Extra Pillow</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=pillow'>Add Extra Pillow</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
+                    <tr className="list-tr">
+                         <td className="list-td" >Air Mattress</td>
+                         {this.state.airmattress.name.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.airmattress.image} /></td> : <td className="no-td"></td>}
+                         {this.state.airmattress.name.length === 0 ? <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=airmattress'>Add Air Mattress</a></td> : <td className="list-td">{this.state.airmattress.name}</td>}
+                         {this.state.airmattress.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.airmattress.price}</td>}
+                         {this.state.airmattress.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.airmattress.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.airmattress.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="airmattress" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'airmattress' ? <MultiSelect index={index} tdName='airmattress' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.airmattress.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Extra Air Mattress</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=airmattress'>Add Extra Air Mattress</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
+                    <tr className="list-tr">
+                         <td className="list-td">Air Pump</td>
+                         {this.state.airpump.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.airpump.image} /></td> : <td className="no-td"></td>}
+                         {this.state.airpump.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=airpump'>Add Air Pump</a></td> : <td className="list-td">{this.state.airpump.name}</td>}
+                         {this.state.airpump.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.airpump.price}</td>}
+                         {this.state.airpump.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.airpump.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.airpump.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="airpump" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'airpump' ? <MultiSelect index={index} tdName='airpump' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.airpump.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Extra Air Pump</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=airpump'>Add Extra Air Pump</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
+                    <tr className="list-tr">
+                         <td className="list-td">Sleeping Cot or Pad</td>
+                         {this.state.sleepingcot.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.sleepingcot.image} /></td> : <td className="no-td"></td>}
+                         {this.state.sleepingcot.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=sleepingcot'>Add Sleeping Cot or Pad</a></td> : <td className="list-td">{this.state.sleepingcot.name}</td>}
+                         {this.state.sleepingcot.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.sleepingcot.price}</td>}
+                         {this.state.sleepingcot.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.sleepingcot.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.sleepingcot.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="sleepingcot" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'sleepingcot' ? <MultiSelect index={index} tdName='sleepingcot' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.sleepingcot.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Extra Sleeping Cot or Pad</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=sleepingcot'>Add Extra Sleeping Cot or Pad</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
 
-                    <tr className="tr-list-break"><td className="td-list-break">Essentials</td></tr>
+
+
+                    <tr className="tr-list-break"><td className="td-list-break">Cooking</td></tr>
+                    
                     <tr className="list-tr">
-                         <td className="list-td" >Headlamp</td>
-                         {this.state.headlamp.name.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.headlamp.image} /></td> : <td className="no-td"></td>}
-                         {this.state.headlamp.name.length === 0 ? <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=headlamp'>Add Headlamp</a></td> : <td className="list-td">{this.state.headlamp.name}</td>}
-                         {this.state.headlamp.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.headlamp.price}</td>}
-                         {this.state.headlamp.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.headlamp.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.headlamp.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="headlamp" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Water Container </td>
+                         {this.state.watercontainer.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.watercontainer.image} /></td> : <td className="no-td"></td>}
+                         {this.state.watercontainer.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=watercontainer'>Add Water Container</a></td> : <td className="list-td">{this.state.watercontainer.name}</td>}
+                         {this.state.watercontainer.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.watercontainer.price}</td>}
+                         {this.state.watercontainer.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.watercontainer.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.watercontainer.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="watercontainer" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'headlamp' ? <MultiSelect index={index} tdName='Headlamp' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'watercontainer' ? <MultiSelect index={index} tdName='Water Container' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.headlamp.name.length !== 0 ? 
+                    {this.state.watercontainer.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Headlamp</td>
+                          <td className="list-td" >Add Extra Water Container</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=headlamp'>Add Extra Headlamp</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=watercontainer'>Add Extra Water Container</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Compass</td>
-                         {this.state.compass.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.compass.image} /></td> : <td className="no-td"></td>}
-                         {this.state.compass.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=compass'>Add Compass</a></td> : <td className="list-td">{this.state.compass.name}</td>}
-                         {this.state.compass.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.compass.price}</td>}
-                         {this.state.compass.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.compass.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.compass.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="compass" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Coolers</td>
+                         {this.state.cooler.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.cooler.image} /></td> : <td className="no-td"></td>}
+                         {this.state.cooler.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=cooler'>Add Coolers</a></td> : <td className="list-td">{this.state.cooler.name}</td>}
+                         {this.state.cooler.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.cooler.price}</td>}
+                         {this.state.cooler.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.cooler.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.cooler.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="cooler" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'compass' ? <MultiSelect index={index} tdName='compass' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'cooler' ? <MultiSelect index={index} tdName='cooler' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.compass.name.length !== 0 ? 
+                    {this.state.cooler.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Compass</td>
+                          <td className="list-td" >Add Extra Coolers</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=compass'>Add Extra Compass</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=cooler'>Add Extra Coolers</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Knives </td>
-                         {this.state.knive.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.knive.image} /></td> : <td className="no-td"></td>}
-                         {this.state.knive.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=knive'>Add Knives</a></td> : <td className="list-td">{this.state.knive.name}</td>}
-                         {this.state.knive.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.knive.price}</td>}
-                         {this.state.knive.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.knive.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.knive.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="knive" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Thermos</td>
+                         {this.state.thermos.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.thermos.image} /></td> : <td className="no-td"></td>}
+                         {this.state.thermos.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=thermos'>Add Thermos</a></td> : <td className="list-td">{this.state.thermos.name}</td>}
+                         {this.state.thermos.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.thermos.price}</td>}
+                         {this.state.thermos.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.thermos.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.thermos.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="thermos" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'knive' ? <MultiSelect index={index} tdName='Knives' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'thermos' ? <MultiSelect index={index} tdName='thermos' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.knive.name.length !== 0 ? 
+                    {this.state.thermos.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Knives</td>
+                          <td className="list-td" >Add Extra Thermos</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=knive'>Add Extra Knives</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=thermos'>Add Extra Thermos</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Trekking Poles</td>
-                         {this.state.trekkingpoles.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.trekkingpoles.image} /></td> : <td className="no-td"></td>}
-                         {this.state.trekkingpoles.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=trekkingpoles'>Add Trekking Poles</a></td> : <td className="list-td">{this.state.trekkingpoles.name}</td>}
-                         {this.state.trekkingpoles.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.trekkingpoles.price}</td>}
-                         {this.state.trekkingpoles.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.trekkingpoles.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.trekkingpoles.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="trekkingpoles" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td" >Stove</td>
+                         {this.state.stove.name.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.stove.image} /></td> : <td className="no-td"></td>}
+                         {this.state.stove.name.length === 0 ? <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=Stove'>Add stove</a></td> : <td className="list-td">{this.state.stove.name}</td>}
+                         {this.state.stove.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.stove.price}</td>}
+                         {this.state.stove.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.rl}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.stove.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="stove" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'trekkingpoles' ? <MultiSelect index={index} tdName='trekkingpoles' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'stove' ? <MultiSelect index={index} tdName='Stove' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.trekkingpoles.name.length !== 0 ? 
+                    {this.state.stove.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Trekking Poles</td>
+                          <td className="list-td" >Add Stove</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=trekkingpoles'>Add Extra Trekking Poles</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=Stove'>Add Extra Stove</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Misc Essentials</td>
-                         {this.state.essentialsmisc.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.essentialsmisc.image} /></td> : <td className="no-td"></td>}
-                         {this.state.essentialsmisc.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=essentialsmisc'>Add Misc Essentials</a></td> : <td className="list-td">{this.state.essentialsmisc.name}</td>}
-                         {this.state.essentialsmisc.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.essentialsmisc.price}</td>}
-                         {this.state.essentialsmisc.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.sl}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.essentialsmisc.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="essentialsmisc" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                         <td className="list-td">Propane</td>
+                         {this.state.propane.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.propane.image} /></td> : <td className="no-td"></td>}
+                         {this.state.propane.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=propane'>Add Propane</a></td> : <td className="list-td">{this.state.propane.name}</td>}
+                         {this.state.propane.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.propane.price}</td>}
+                         {this.state.propane.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.propane.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.propane.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="propane" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
                     </tr>
                     {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'essentialsmisc' ? <MultiSelect index={index} tdName='Misc Essentials' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                        return(data.type === 'propane' ? <MultiSelect index={index} tdName='Propane' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
                     }) : null}
-                    {this.state.essentialsmisc.name.length !== 0 ? 
+                    {this.state.propane.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Misc Essentials</td>
+                          <td className="list-td" >Add Extra Propane</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=essentialsmisc'>Add Extra Misc Essentials</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=propane'>Add Extra Propane</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
+                    <tr className="list-tr">
+                         <td className="list-td">Charcoal</td>
+                         {this.state.charcoal.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.charcoal.image} /></td> : <td className="no-td"></td>}
+                         {this.state.charcoal.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=charcoal'>Add Charcoal</a></td> : <td className="list-td">{this.state.charcoal.name}</td>}
+                         {this.state.charcoal.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.charcoal.price}</td>}
+                         {this.state.charcoal.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.charcoal.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.charcoal.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="charcoal" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'charcoal' ? <MultiSelect index={index} tdName='Charcoal' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.charcoal.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Extra Charcoal</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=charcoal'>Add Extra Charcoal</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
+                    <tr className="list-tr">
+                         <td className="list-td">Lighter/Matches</td>
+                         {this.state.lighter.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.lighter.image} /></td> : <td className="no-td"></td>}
+                         {this.state.lighter.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=lighter'>Add Lighter/Matches</a></td> : <td className="list-td">{this.state.lighter.name}</td>}
+                         {this.state.lighter.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.lighter.price}</td>}
+                         {this.state.lighter.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.lighter.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.lighter.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="lighter" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'lighter' ? <MultiSelect index={index} tdName='lighter' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.lighter.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Extra Lighter/Matches</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=lighter'>Add Extra Lighter/Matches</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
+                    <tr className="list-tr">
+                         <td className="list-td">Misc Cooking</td>
+                         {this.state.cookingmisc.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.cookingmisc.image} /></td> : <td className="no-td"></td>}
+                         {this.state.cookingmisc.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=cookingmisc'>Add Misc Cooking</a></td> : <td className="list-td">{this.state.cookingmisc.name}</td>}
+                         {this.state.cookingmisc.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.cookingmisc.price}</td>}
+                         {this.state.cookingmisc.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.sl}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.cookingmisc.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="cookingmisc" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'cookingmisc' ? <MultiSelect index={index} tdName='Misc Cooking' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.cookingmisc.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Misc Cooking</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=cookingmisc'>Add Extra Misc Cooking</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -474,7 +597,7 @@ class CampingList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">Medical Kits </td>
                          {this.state.medical.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.medical.image} /></td> : <td className="no-td"></td>}
-                         {this.state.medical.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=medical'>Add Medical Kits</a></td> : <td className="list-td">{this.state.medical.name}</td>}
+                         {this.state.medical.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=medical'>Add Medical Kits</a></td> : <td className="list-td">{this.state.medical.name}</td>}
                          {this.state.medical.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.medical.price}</td>}
                          {this.state.medical.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.medical.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.medical.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="medical" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -486,7 +609,7 @@ class CampingList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Medical Kits</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=medical'>Add Extra Medical Kits</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=medical'>Add Extra Medical Kits</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -494,7 +617,7 @@ class CampingList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">Water Purifier </td>
                          {this.state.waterpurifier.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.waterpurifier.image} /></td> : <td className="no-td"></td>}
-                         {this.state.waterpurifier.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=waterpurifier'>Add Water Purifier</a></td> : <td className="list-td">{this.state.waterpurifier.name}</td>}
+                         {this.state.waterpurifier.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=waterpurifier'>Add Water Purifier</a></td> : <td className="list-td">{this.state.waterpurifier.name}</td>}
                          {this.state.waterpurifier.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.waterpurifier.price}</td>}
                          {this.state.waterpurifier.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.waterpurifier.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.waterpurifier.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="waterpurifier" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -506,27 +629,7 @@ class CampingList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Water Purifier</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=waterpurifier'>Add Extra Water Purifier</a></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                    </tr> : null}
-                    <tr className="list-tr">
-                         <td className="list-td">Fire Starter </td>
-                         {this.state.firestarter.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.firestarter.image} /></td> : <td className="no-td"></td>}
-                         {this.state.firestarter.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=firestarter'>Add Fire Starter</a></td> : <td className="list-td">{this.state.firestarter.name}</td>}
-                         {this.state.firestarter.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.firestarter.price}</td>}
-                         {this.state.firestarter.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.firestarter.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.firestarter.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="firestarter" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
-                    </tr>
-                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'firestarter' ? <MultiSelect index={index} tdName='GPS' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
-                    }) : null}
-                    {this.state.gps.name.length !== 0 ? 
-                          <tr className="list-tr">
-                          <td className="list-td" >Add Extra Fire Starter</td>
-                          <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=firestarter'>Add Extra Fire Starter</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=waterpurifier'>Add Extra Water Purifier</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -534,7 +637,7 @@ class CampingList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">GPS </td>
                          {this.state.gps.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.gps.image} /></td> : <td className="no-td"></td>}
-                         {this.state.gps.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=gps'>Add GPS</a></td> : <td className="list-td">{this.state.gps.name}</td>}
+                         {this.state.gps.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=gps'>Add GPS</a></td> : <td className="list-td">{this.state.gps.name}</td>}
                          {this.state.gps.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.gps.price}</td>}
                          {this.state.gps.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.gps.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.gps.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="gps" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -546,7 +649,7 @@ class CampingList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra GPS</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=gps'>Add Extra GPS</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=gps'>Add Extra GPS</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -554,9 +657,29 @@ class CampingList extends React.Component {
 
                     <tr className="tr-list-break"><td className="td-list-break">Misc Gear</td></tr>
                     <tr className="list-tr">
+                         <td className="list-td">Lantern </td>
+                         {this.state.lantern.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.lantern.image} /></td> : <td className="no-td"></td>}
+                         {this.state.lantern.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=lantern'>Add Lantern</a></td> : <td className="list-td">{this.state.lantern.name}</td>}
+                         {this.state.lantern.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.lantern.price}</td>}
+                         {this.state.lantern.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.lantern.link}>Buy Now!</button></td> : <td className="no-td"></td>}
+                         {this.state.lantern.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="lantern" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
+                    </tr>
+                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
+                        return(data.type === 'lantern' ? <MultiSelect index={index} tdName='Lantern' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
+                    }) : null}
+                    {this.state.lantern.name.length !== 0 ? 
+                          <tr className="list-tr">
+                          <td className="list-td" >Add Extra Lantern</td>
+                          <td className="no-td"></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=lantern'>Add Extra Lantern</a></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                          <td className="no-td"></td>
+                    </tr> : null}
+                    <tr className="list-tr">
                          <td className="list-td">Misc</td>
                          {this.state.misc.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.misc.image} /></td> : <td className="no-td"></td>}
-                         {this.state.misc.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=misc'>Add Misc Gear</a></td> : <td className="list-td">{this.state.misc.name}</td>}
+                         {this.state.misc.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=misc'>Add Misc Gear</a></td> : <td className="list-td">{this.state.misc.name}</td>}
                          {this.state.misc.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.misc.price}</td>}
                          {this.state.misc.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.misc.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.misc.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="misc" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -568,7 +691,7 @@ class CampingList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Misc Gear</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=misc'>Add Extra Misc Gear</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=misc'>Add Extra Misc Gear</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
