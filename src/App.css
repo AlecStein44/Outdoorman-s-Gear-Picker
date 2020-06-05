@@ -1019,6 +1019,12 @@
     text-align: right;
   }
   
+  .list-td, .list-th {
+    text-align: center;
+    padding: 8px;
+    height: 60px;
+  }
+  
   table td::before {
     /*
     * aria-label has no advantage, it won't be read inside a table
