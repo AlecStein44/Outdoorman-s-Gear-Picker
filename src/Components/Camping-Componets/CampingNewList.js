@@ -698,7 +698,7 @@ class CampingNewList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">Sleeping Cot or Pad</td>
                          {this.state.sleepingcot.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.sleepingcot.image} /></td> : <td className="no-td"></td>}
-                         {this.state.sleepingcot.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=sleepingcot'>Add Sleeping Cot or Pad</a></td> : <td className="list-td">{this.state.sleepingcot.name}</td>}
+                         {this.state.sleepingcot.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=sleepingcot'>Add Sleeping Cot or Pad</a></td> : <td className="list-td">{this.state.sleepingcot.name}</td>}
                          {this.state.sleepingcot.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.sleepingcot.price}</td>}
                          {this.state.sleepingcot.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.sleepingcot.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.sleepingcot.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="sleepingcot" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -710,7 +710,7 @@ class CampingNewList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Sleeping Cot or Pad</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=sleepingcot'>Add Extra Sleeping Cot or Pad</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=sleepingcot'>Add Extra Sleeping Cot or Pad</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -763,7 +763,7 @@ class CampingNewList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">Thermos</td>
                          {this.state.thermos.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.thermos.image} /></td> : <td className="no-td"></td>}
-                         {this.state.thermos.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=thermos'>Add Thermos</a></td> : <td className="list-td">{this.state.thermos.name}</td>}
+                         {this.state.thermos.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=thermos'>Add Thermos</a></td> : <td className="list-td">{this.state.thermos.name}</td>}
                          {this.state.thermos.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.thermos.price}</td>}
                          {this.state.thermos.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.thermos.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.thermos.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="thermos" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -775,7 +775,7 @@ class CampingNewList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Thermos</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=thermos'>Add Extra Thermos</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=thermos'>Add Extra Thermos</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -783,7 +783,7 @@ class CampingNewList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td" >Stove</td>
                          {this.state.stove.name.length !== 0 ? <td className="list-td"><img className="list-image" src={this.state.stove.image} /></td> : <td className="no-td"></td>}
-                         {this.state.stove.name.length === 0 ? <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=Stove'>Add stove</a></td> : <td className="list-td">{this.state.stove.name}</td>}
+                         {this.state.stove.name.length === 0 ? <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=Stove'>Add stove</a></td> : <td className="list-td">{this.state.stove.name}</td>}
                          {this.state.stove.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.stove.price}</td>}
                          {this.state.stove.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.rl}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.stove.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="stove" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -795,7 +795,7 @@ class CampingNewList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Stove</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=Stove'>Add Extra Stove</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=Stove'>Add Extra Stove</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -803,7 +803,7 @@ class CampingNewList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">Propane</td>
                          {this.state.propane.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.propane.image} /></td> : <td className="no-td"></td>}
-                         {this.state.propane.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=propane'>Add Propane</a></td> : <td className="list-td">{this.state.propane.name}</td>}
+                         {this.state.propane.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=propane'>Add Propane</a></td> : <td className="list-td">{this.state.propane.name}</td>}
                          {this.state.propane.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.propane.price}</td>}
                          {this.state.propane.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.propane.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.propane.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="propane" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -815,7 +815,7 @@ class CampingNewList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Propane</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=propane'>Add Extra Propane</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=propane'>Add Extra Propane</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -823,7 +823,7 @@ class CampingNewList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">Charcoal</td>
                          {this.state.charcoal.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.charcoal.image} /></td> : <td className="no-td"></td>}
-                         {this.state.charcoal.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=charcoal'>Add Charcoal</a></td> : <td className="list-td">{this.state.charcoal.name}</td>}
+                         {this.state.charcoal.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=charcoal'>Add Charcoal</a></td> : <td className="list-td">{this.state.charcoal.name}</td>}
                          {this.state.charcoal.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.charcoal.price}</td>}
                          {this.state.charcoal.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.charcoal.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.charcoal.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="charcoal" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -835,7 +835,7 @@ class CampingNewList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Charcoal</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=charcoal'>Add Extra Charcoal</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=charcoal'>Add Extra Charcoal</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -843,7 +843,7 @@ class CampingNewList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">Lighter/Matches</td>
                          {this.state.lighter.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.lighter.image} /></td> : <td className="no-td"></td>}
-                         {this.state.lighter.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=lighter'>Add Lighter/Matches</a></td> : <td className="list-td">{this.state.lighter.name}</td>}
+                         {this.state.lighter.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=lighter'>Add Lighter/Matches</a></td> : <td className="list-td">{this.state.lighter.name}</td>}
                          {this.state.lighter.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.lighter.price}</td>}
                          {this.state.lighter.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.lighter.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.lighter.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="lighter" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -855,7 +855,7 @@ class CampingNewList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Lighter/Matches</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=lighter'>Add Extra Lighter/Matches</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=lighter'>Add Extra Lighter/Matches</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -948,7 +948,7 @@ class CampingNewList extends React.Component {
                     <tr className="list-tr">
                          <td className="list-td">Lantern </td>
                          {this.state.lantern.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.lantern.image} /></td> : <td className="no-td"></td>}
-                         {this.state.lantern.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=lantern'>Add Lantern</a></td> : <td className="list-td">{this.state.lantern.name}</td>}
+                         {this.state.lantern.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=lantern'>Add Lantern</a></td> : <td className="list-td">{this.state.lantern.name}</td>}
                          {this.state.lantern.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.lantern.price}</td>}
                          {this.state.lantern.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.lantern.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.lantern.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="lantern" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -960,7 +960,7 @@ class CampingNewList extends React.Component {
                           <tr className="list-tr">
                           <td className="list-td" >Add Extra Lantern</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/productsearch?type=lantern'>Add Extra Lantern</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/campingproductsearch?type=lantern'>Add Extra Lantern</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
