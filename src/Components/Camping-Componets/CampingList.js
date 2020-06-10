@@ -224,26 +224,6 @@ class CampingList extends React.Component {
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Tarp</td>
-                         {this.state.tarp.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.tarp.image} /></td> : <td className="no-td"></td>}
-                         {this.state.tarp.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=tarp'>Add Tarp</a></td> : <td className="list-td">{this.state.tarp.name}</td>}
-                         {this.state.tarp.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.tarp.price}</td>}
-                         {this.state.tarp.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.tarp.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.tarp.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="tarp" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
-                    </tr>
-                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'tarp' ? <MultiSelect index={index} tdName='tarp' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
-                    }) : null}
-                    {this.state.tarp.name.length !== 0 ? 
-                          <tr className="list-tr">
-                          <td className="list-td" >Add Extra Tarp</td>
-                          <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=tarp'>Add Extra tarp</a></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                    </tr> : null}
-                    <tr className="list-tr">
                          <td className="list-td">Stakes</td>
                          {this.state.stakes.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.stakes.image} /></td> : <td className="no-td"></td>}
                          {this.state.stakes.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=stakes'>Add Stakes</a></td> : <td className="list-td">{this.state.stakes.name}</td>}
@@ -264,9 +244,9 @@ class CampingList extends React.Component {
                           <td className="no-td"></td>
                     </tr> : null}
                     <tr className="list-tr">
-                         <td className="list-td">Shade Tarp</td>
+                         <td className="list-td">Canopy</td>
                          {this.state.shadetarp.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.shadetarp.image} /></td> : <td className="no-td"></td>}
-                         {this.state.shadetarp.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=shadetarp'>Add Shade Tarp</a></td> : <td className="list-td">{this.state.shadetarp.name}</td>}
+                         {this.state.shadetarp.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=shadetarp'>Add Canopy</a></td> : <td className="list-td">{this.state.shadetarp.name}</td>}
                          {this.state.shadetarp.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.shadetarp.price}</td>}
                          {this.state.shadetarp.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.shadetarp.link}>Buy Now!</button></td> : <td className="no-td"></td>}
                          {this.state.shadetarp.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="shadetarp" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
@@ -276,9 +256,9 @@ class CampingList extends React.Component {
                     }) : null}
                     {this.state.shadetarp.name.length !== 0 ? 
                           <tr className="list-tr">
-                          <td className="list-td" >Add Extra Shade Tarp</td>
+                          <td className="list-td" >Add Extra Canopy</td>
                           <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=shadetarp'>Add Extra Shade Tarp</a></td>
+                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=shadetarp'>Add Extra Canopy</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
@@ -299,26 +279,6 @@ class CampingList extends React.Component {
                           <td className="list-td" >Add Extra Axe</td>
                           <td className="no-td"></td>
                           <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=axe'>Add Extra Axe</a></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                          <td className="no-td"></td>
-                    </tr> : null}
-                    <tr className="list-tr">
-                         <td className="list-td">Hammer</td>
-                         {this.state.hammer.name.length !== 0 ? <td className="list-td" ><img className="list-image" src={this.state.hammer.image} /></td> : <td className="no-td"></td>}
-                         {this.state.hammer.name.length === 0 ? <td className="list-td"><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hammer'>Add Hammer</a></td> : <td className="list-td">{this.state.hammer.name}</td>}
-                         {this.state.hammer.name.length === 0 ? <td className="no-td"></td> : <td className="list-td">${this.state.hammer.price}</td>}
-                         {this.state.hammer.name.length !== 0 ? <td className="list-td"><button className="buybutton" onClick={this.buyNow.bind(this)} value={this.state.hammer.link}>Buy Now!</button></td> : <td className="no-td"></td>}
-                         {this.state.hammer.name.length !== 0 ? <td className="list-td"><button className="list-delete" value="hammer" onClick={this.handleDelete.bind(this)}>X</button></td> : <td className="no-td"></td>}
-                    </tr>
-                    {this.state.multiArr.guns !== null ? this.state.multiArr.guns.map((data, index) => {
-                        return(data.type === 'hammer' ? <MultiSelect index={index} tdName='Hammer' data={data} handleDelete={this.handleDelete.bind(this)} buyNow={this.buyNow} value={index} /> : null )
-                    }) : null}
-                    {this.state.hammer.name.length !== 0 ? 
-                          <tr className="list-tr">
-                          <td className="list-td" >Add Extra Hammer</td>
-                          <td className="no-td"></td>
-                          <td className="list-td" ><a className="newlist-a" href='https://outdoorgearpicker.now.sh/editcampingproductsearch?type=hammer'>Add Extra Hammer</a></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
                           <td className="no-td"></td>
